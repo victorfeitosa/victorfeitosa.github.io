@@ -1,6 +1,5 @@
 @import './colors';
 
-
 .main-layout {
   display: flex;
   height: 100vh;
@@ -9,5 +8,12 @@
 
 .profile-section {
   background-color: $base;
-  width: 80%;
+  clip-path: polygon(0 0, 100% 0%, 92% 100%, 0 100%);
+  width: 84%;
+
+  transition: all .3s ease-in-out;
+
+  &--open {
+    width: 30%;
+  }
 }

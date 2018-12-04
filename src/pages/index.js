@@ -4,8 +4,8 @@ import Layout from '../components/Layout'
 import '../styles/reset.scss';
 
 const IndexPage = () => (
-  <Layout>
-    
+  <Layout outsideHome={false}>
+    <div>Something</div>
   </Layout>
 )
 
