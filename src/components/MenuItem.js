@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
-function MenuItem() {
+import '../styles/MenuItem.scss'
+
+function MenuItem({ to, children }) {
   return (
-    <div>
-      
+    <div  className='menu-item'>
+      <Link to={to}>{ children }</Link>
     </div>
   )
 }

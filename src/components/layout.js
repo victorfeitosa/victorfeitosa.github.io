@@ -51,7 +51,7 @@ export const Layout = ({ children, outsideHome }) => (
 
     {children}
 
-    <Menu selectedIndex={-1}/>
+    <Menu/>
   </div>
 )
 

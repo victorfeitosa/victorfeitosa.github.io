@@ -5,7 +5,6 @@ import '../styles/reset.scss';
 
 const IndexPage = () => (
   <Layout outsideHome={false}>
-    <div>Something</div>
   </Layout>
 )
 
