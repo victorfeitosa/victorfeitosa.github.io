@@ -9,11 +9,26 @@
 .profile-section {
   background-color: $base;
   clip-path: polygon(0 0, 100% 0%, 92% 100%, 0 100%);
-  width: 84%;
-
-  transition: all .3s ease-in-out;
+  transition: width .3s ease-in-out;
+  width: 85%;
 
   &--open {
     width: 20%;
   }
+}
+
+.page-section {
+}
+
+.menu-section {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  max-width: 15%;
+  min-width: 220px;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  width: 15%;
 }

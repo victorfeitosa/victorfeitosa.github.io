@@ -1,31 +1,17 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-// import { connect } from 'react-redux'
-import BigPic from './BigPic'
-import Menu from './Menu'
-import SocialBar from './SocialBar'
-import Tags from './Tags'
+import BigPic from '../components/BigPic'
+import Menu from '../components/Menu'
+import SocialBar from '../components/SocialBar'
+import Tags from '../components/Tags'
 
 import '../styles/reset.scss'
 import '../styles/Layout.scss'
-import { navigate } from '@reach/router';
+import { navigate, globalHistory } from '@reach/router'
 
 export class Layout extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      outsideHome: props.outsideHome,
-    }
-  }
-
-  componentWillUpdate () {
-    console.log('UPDATING COMPONENT')
-    return true
-  }
-
   render() {
+    const outsideHome = globalHistory.location.pathname !== '/'
     return (
       <div className="main-layout">
         <Helmet
@@ -44,19 +30,20 @@ export class Layout extends React.Component {
         >
           <html lang="en" />
         </Helmet>
+        {/* NOTE: Purple section containing profile */}
         <section
           onClick={() => {
             navigate('/')
           }}
           className={
             'profile-section' +
-            (this.props.outsideHome ? ' profile-section--open' : '')
+            (outsideHome ? ' profile-section--open' : '')
           }
         >
-          <BigPic isSmall={this.state.outsideHome} src="" />
+          <BigPic isSmall={outsideHome} src="" />
           <h3>I'm a Full Time</h3>
           <Tags
-            isSmall={this.state.outsideHome}
+            isSmall={outsideHome}
             tags={[
               'Front End Developer',
               'Gamer',
@@ -64,28 +51,21 @@ export class Layout extends React.Component {
               'Technology Enthusiast',
             ]}
           />
-          <SocialBar isSmall={this.state.outsideHome} />
+          <SocialBar isSmall={outsideHome} />
         </section>
-        {this.props.children}
-        <Menu />
+
+        {/* NOTE: Page section where pages are loaded */}
+        <section className='page-section'>
+          {this.props.children}
+        </section>
+
+        {/* NOTE: Menu section */}
+        <section className='menu-section'>
+          <Menu />
+        </section>
       </div>
     )
   }
 }
-
-// Layout.propTypes = {
-// children: PropTypes.node.isRequired,
-// outsideHome: PropTypes.bool,
-// }
-
-// const mapStateToProps = state => ({
-//   outsideHome: state.outsideHome,
-// })
-
-// const mapDispatchToProps = dispatch => ({
-
-// })
-
-// export default connect(mapStateToProps)(Layout)
 
 export default Layout
