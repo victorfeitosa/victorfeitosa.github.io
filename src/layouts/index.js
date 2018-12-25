@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import BigPic from '../components/BigPic'
 import Menu from '../components/Menu'
+import Copyright from '../components/Copyright'
 import SocialBar from '../components/SocialBar'
 import Tags from '../components/Tags'
 
@@ -62,6 +63,9 @@ export class Layout extends React.Component {
         {/* NOTE: Menu section */}
         <section className='menu-section'>
           <Menu />
+        </section>
+        <section className='copyright-section'>
+          <Copyright />
         </section>
       </div>
     )

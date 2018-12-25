@@ -21,14 +21,14 @@
 }
 
 .menu-section {
-  align-content: center;
+  align-content: right;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
   max-width: 15%;
   min-width: 220px;
   position: absolute;
   right: 0;
-  text-align: right;
   width: 15%;
 }

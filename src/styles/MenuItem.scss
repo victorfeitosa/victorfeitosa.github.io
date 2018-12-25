@@ -1,7 +1,6 @@
 @import 'colors';
 
 .menu-item {
-  border-radius: 2% 0 0 2% / 50% 0 0 50%;
   box-sizing: border-box;
   color: $base;
   display: block;
@@ -11,16 +10,40 @@
 
   padding: 1rem 2rem;
   text-decoration: none;
-  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   width: 100%;
 
-  &:hover {
+  &::before {
     background-color: $contrast;
-    color: $background;
+    content: '';
+    height: 42px;
+    position: absolute;
+    right: 0;
+    transform: translateY(-14%);
+    transition: width 0.3s ease-in-out;
+    width: 0;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::before {
+      width: 0.25rem;
+    }
   }
 
   &--active {
-    background-color: $contrast;
     color: $highlight;
+
+    &:hover {
+      &::before {
+        border-radius: 2% 0 0 2% / 50% 0 0 50%;
+        width: 100%;
+      }
+    }
+
+    &::before {
+      border-radius: 2% 0 0 2% / 50% 0 0 50%;
+      width: 100%;
+    }
   }
 }
