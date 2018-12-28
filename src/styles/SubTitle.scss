@@ -1,0 +1,38 @@
+@import 'colors';
+
+.title-container {
+  text-align: center;
+
+  .title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: font-size .3s ease-in-out, opacity .3s ease-in-out;
+
+    &--main {
+      color: $contrast;
+      font-size: 36px;
+      font-weight: bold;
+
+      .hideable {
+        transition: opacity .3s ease-in-out;
+      }
+
+      &--small {
+        font-size: 24px;
+
+        .hideable {
+          opacity: 0;
+        }
+      }
+    }
+
+    &--sub {
+      color: $grey;
+      font-weight: 500;
+      transition: opacity .3s ease-in-out;
+
+      &--hidden {
+        opacity: 0;
+      }
+    }
+  }
+}

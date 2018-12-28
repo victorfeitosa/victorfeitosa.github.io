@@ -5,6 +5,7 @@ import Menu from '../components/Menu'
 import Copyright from '../components/Copyright'
 import SocialBar from '../components/SocialBar'
 import Tags from '../components/Tags'
+import SubTitle from '../components/SubTitle'
 
 import '../styles/reset.scss'
 import '../styles/Layout.scss'
@@ -42,7 +43,7 @@ export class Layout extends React.Component {
           }
         >
           <BigPic isSmall={outsideHome} src="" />
-          <h3>I'm a Full Time</h3>
+          <SubTitle isSmall={outsideHome}/>
           <Tags
             isSmall={outsideHome}
             tags={[
@@ -63,8 +64,6 @@ export class Layout extends React.Component {
         {/* NOTE: Menu section */}
         <section className='menu-section'>
           <Menu />
-        </section>
-        <section className='copyright-section'>
           <Copyright />
         </section>
       </div>

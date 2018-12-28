@@ -1,9 +1,10 @@
 import React from 'react'
+import '../styles/Copyright.scss'
 
-function Copyright() {
+const Copyright = () => {
   return (
-    <div>
-      
+    <div className='copyright'>
+      &copy Victor Feitosa - 2018
     </div>
   )
 }

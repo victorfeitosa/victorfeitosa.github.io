@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-function BigPic(props) {
+import '../styles/BigPic.scss'
+
+const BigPic = (props) => {
   return (
-    <div>
-      
-    </div>
+    <div className={'big-pic' + (props.isSmall ? ' big-pic--small' : '')}></div>
   )
 }
 
-export default BigPic;
+export default BigPic

@@ -10,7 +10,7 @@
 
   padding: 1rem 2rem;
   text-decoration: none;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
   width: 100%;
 
   &::before {
@@ -20,14 +20,14 @@
     position: absolute;
     right: 0;
     transform: translateY(-14%);
-    transition: width 0.3s ease-in-out;
+    transition: width .3s ease-in-out, border-radius .3s ease-in-out;
     width: 0;
     z-index: -1;
   }
 
   &:hover {
     &::before {
-      width: 0.25rem;
+      width: 0.5rem;
     }
   }
 

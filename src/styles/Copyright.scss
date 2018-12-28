@@ -1,0 +1,10 @@
+@import 'colors';
+
+.copyright {
+  bottom: 0;
+  color: $contrast;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 90%;
+  font-weight: 400;
+  position: absolute;
+}
