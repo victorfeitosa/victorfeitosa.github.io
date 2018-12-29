@@ -1,3 +1,6 @@
+@import 'defaults';
+
+$img-size: 350px;
 .big-pic {
   background-image: url(../images/profile.jpg);
   background-position: center;
@@ -5,10 +8,10 @@
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
 
-  height: 320px;
-  margin: 4rem 0 5rem 0;
-  transition: width .3s ease-in-out, height .3s ease-in-out;
-  width: 320px;
+  height: $img-size;
+  margin: 5rem 0;
+  transition: width $d-animation, height $d-animation;
+  width: $img-size;
 
   &--small {
     margin: 5rem 0 1rem 0;

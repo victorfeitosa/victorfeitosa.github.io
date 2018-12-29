@@ -1,10 +1,10 @@
 import React from 'react'
 
-function SocialLink() {
+import '../styles/SocialLink.scss'
+
+const SocialLink = (props) => {
   return (
-    <div>
-      
-    </div>
+    <a className='social-link' href={props.to} target="_blank " rel="noopener noreferrer">{props.icon}</a>
   )
 }
 
