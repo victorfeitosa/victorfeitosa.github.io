@@ -12,17 +12,10 @@
       font-size: 36px;
       font-weight: bold;
       margin-bottom: 3rem;
+      margin-top: 4rem;
 
       .hideable {
         transition: opacity .3s ease-in-out;
-      }
-
-      &--small {
-        font-size: 24px;
-
-        .hideable {
-          opacity: 0;
-        }
       }
     }
 
@@ -30,10 +23,6 @@
       color: $grey;
       font-weight: 500;
       transition: opacity .3s ease-in-out;
-
-      &--hidden {
-        opacity: 0;
-      }
     }
   }
 }

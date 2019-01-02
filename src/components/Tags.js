@@ -8,7 +8,7 @@ const Tags = (props) => {
         props.tags.map((tag, i) => (
           <div className='tag'>
           {tag}
-          {!props.isSmall && i !== props.tags.length-1 && <span className='tag__separator'>/</span>}</div>
+          </div>
         ))
       }
     </div>

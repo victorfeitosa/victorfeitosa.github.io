@@ -3,7 +3,6 @@
 .main-layout {
   display: flex;
   height: 100vh;
-  // width: 100%;
 }
 
 .profile-section {
@@ -17,6 +16,15 @@
 
   &--open {
     width: 20%;
+  }
+
+  .info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    justify-self: flex-end;
   }
 }
 

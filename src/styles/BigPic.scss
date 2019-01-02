@@ -9,13 +9,9 @@ $img-size: 350px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
 
   height: $img-size;
-  margin: 5rem 0;
+  min-height: $img-size;
+  min-width: $img-size;
+  margin-top: 2rem;
   transition: width $d-animation, height $d-animation;
   width: $img-size;
-
-  &--small {
-    margin: 5rem 0 1rem 0;
-    height: 160px;
-    width: 160px;
-  }
 }

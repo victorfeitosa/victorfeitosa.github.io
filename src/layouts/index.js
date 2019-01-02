@@ -43,17 +43,20 @@ export class Layout extends React.Component {
           }
         >
           <BigPic isSmall={outsideHome} src="" />
-          <SubTitle isSmall={outsideHome}/>
-          <Tags
-            isSmall={outsideHome}
-            tags={[
-              'Front End Developer',
-              'Gamer',
-              'Artist',
-              'Technology Enthusiast',
-            ]}
-          />
-          <SocialBar isSmall={outsideHome} />
+
+          <div className='info-block' >
+            <SubTitle isSmall={outsideHome}/>
+            <Tags
+              isSmall={outsideHome}
+              tags={[
+                'Front End Developer',
+                'Gamer',
+                'Artist',
+                'Technology Enthusiast',
+              ]}
+            />
+            <SocialBar isSmall={outsideHome} />
+          </div>
         </section>
 
         {/* NOTE: Page section where pages are loaded */}
