@@ -1,6 +1,7 @@
 @import 'defaults';
 
-$img-size: 350px;
+$img-size: 400px;
+$img-size-sm: 180px;
 .big-pic {
   background-image: url(../images/profile.jpg);
   background-position: center;
@@ -9,9 +10,21 @@ $img-size: 350px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
 
   height: $img-size;
+  margin-top: 2rem;
   min-height: $img-size;
   min-width: $img-size;
-  margin-top: 2rem;
-  transition: width $d-animation, height $d-animation;
+  transition: min-width $d-animation,
+              min-height $d-animation,
+              width $d-animation,
+              height $d-animation,
+              margin-top $d-animation;
   width: $img-size;
+
+  &--small {
+    height: $img-size-sm;
+    margin-top: 5rem;
+    min-height: $img-size-sm;
+    min-width: $img-size-sm;
+    width: $img-size-sm;
+  }
 }

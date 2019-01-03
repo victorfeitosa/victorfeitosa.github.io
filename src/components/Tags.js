@@ -3,7 +3,7 @@ import '../styles/Tags.scss'
 
 const Tags = (props) => {
   return (
-    <div className='tags-container'>
+    <div className={'tags-container' + (props.isSmall ? ' tags-container--short' : '')}>
       {
         props.tags.map((tag, i) => (
           <div className='tag'>

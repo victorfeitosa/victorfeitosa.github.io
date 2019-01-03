@@ -4,4 +4,8 @@
   display: flex;
   justify-content: space-between;
   margin: 6rem 0 2rem;
+
+  &--small {
+    flex-direction: column;
+  }
 }

@@ -8,6 +8,7 @@
     color: $highlight;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 24px;
+    width: auto;
 
     &::after {
       color: $contrast;
@@ -22,5 +23,19 @@
       }
     }
   }
+  
+  &--short {
+    flex-direction: column;
+    justify-content: center;
 
+    .tag {
+      font-size: 16px;
+      padding: .25rem 0;
+      text-align: center;
+      &::after {
+        content: '';
+        display: none;
+      }
+    }
+  }
 }

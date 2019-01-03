@@ -14,8 +14,14 @@
       margin-bottom: 3rem;
       margin-top: 4rem;
 
-      .hideable {
-        transition: opacity .3s ease-in-out;
+      &--small {
+        font-size: 26px;
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+
+        .hideable {
+          display: none;
+        }
       }
     }
 
@@ -23,6 +29,10 @@
       color: $grey;
       font-weight: 500;
       transition: opacity .3s ease-in-out;
+
+      &--hidden {
+        display: none;
+      }
     }
   }
 }

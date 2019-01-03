@@ -1,4 +1,5 @@
-@import './colors';
+@import 'colors';
+@import 'defaults';
 
 .main-layout {
   display: flex;
@@ -11,10 +12,12 @@
   clip-path: polygon(0 0, 100% 0%, 92% 100%, 0 100%);
   display: flex;
   flex-direction: column;
-  transition: width .3s ease-in-out;
+  justify-content: space-between;
+  transition: width $d-animation;
   width: 85%;
 
   &--open {
+    justify-content: flex-start;
     width: 20%;
   }
 
@@ -22,13 +25,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    bottom: 0;
-    justify-self: flex-end;
+    padding: 2rem 1rem;
+    transition: width $d-animation;
+    width: 100%;
   }
 }
 
 .page-section {
+  max-width: 0;
+  min-width: 0;
+  transition: max-width $d-animation,
+              min-width $d-animation,
+              width $d-animation;
+
+  &--open {
+    max-width: calc(80% - 15%);
+    min-width: calc(80% - 260px);
+  }
 }
 
 .menu-section {

@@ -44,7 +44,7 @@ export class Layout extends React.Component {
         >
           <BigPic isSmall={outsideHome} src="" />
 
-          <div className='info-block' >
+          <div className={'info-block' + (outsideHome ? ' info-block--small' : '')} >
             <SubTitle isSmall={outsideHome}/>
             <Tags
               isSmall={outsideHome}
@@ -60,7 +60,10 @@ export class Layout extends React.Component {
         </section>
 
         {/* NOTE: Page section where pages are loaded */}
-        <section className='page-section'>
+        <section className={
+            'page-section' +
+            (outsideHome ? ' page-section--open' : '')
+          }>
           {this.props.children}
         </section>
 
