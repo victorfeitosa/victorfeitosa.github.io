@@ -1,4 +1,5 @@
-@import 'colors';
+@import './defaults/reset';
+@import './defaults/colors';
 
 .menu-item {
   box-sizing: border-box;

@@ -6,7 +6,7 @@ const Tags = (props) => {
     <div className={'tags-container' + (props.isSmall ? ' tags-container--short' : '')}>
       {
         props.tags.map((tag, i) => (
-          <div className='tag'>
+          <div key={i} className='tag'>
           {tag}
           </div>
         ))

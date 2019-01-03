@@ -1,8 +1,12 @@
-@import 'colors';
+@import './defaults/reset';
+@import './defaults/colors';
 
 .tags-container {
   display: flex;
   justify-content: space-between;
+  height: 4rem;
+  padding-top: 3rem;
+  width: auto;
 
   .tag {
     color: $highlight;

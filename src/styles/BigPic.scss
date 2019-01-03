@@ -1,4 +1,5 @@
-@import 'defaults';
+@import './defaults/reset';
+@import './defaults/defaults';
 
 $img-size: 400px;
 $img-size-sm: 180px;
@@ -22,7 +23,7 @@ $img-size-sm: 180px;
 
   &--small {
     height: $img-size-sm;
-    margin-top: 5rem;
+    margin-top: 3rem;
     min-height: $img-size-sm;
     min-width: $img-size-sm;
     width: $img-size-sm;

@@ -1,9 +1,11 @@
-@import 'colors';
-@import 'defaults';
+@import './defaults/reset';
+@import './defaults/colors';
+@import './defaults/defaults';
 
 .main-layout {
   display: flex;
   height: 100vh;
+  min-height: 768px;
 }
 
 .profile-section {
@@ -11,6 +13,7 @@
   background-color: $base;
   clip-path: polygon(0 0, 100% 0%, 92% 100%, 0 100%);
   display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: space-between;
   transition: width $d-animation;
@@ -22,10 +25,11 @@
   }
 
   .info-block {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
+    justify-content: center;
+    padding: 4% 1rem;
     transition: width $d-animation;
     width: 100%;
   }

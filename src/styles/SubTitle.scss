@@ -1,6 +1,8 @@
-@import 'colors';
+@import './defaults/reset';
+@import './defaults/colors';
 
 .title-container {
+  padding-top: 4rem;
   text-align: center;
 
   .title {
@@ -11,13 +13,11 @@
       color: $contrast;
       font-size: 36px;
       font-weight: bold;
-      margin-bottom: 3rem;
-      margin-top: 4rem;
 
       &--small {
         font-size: 26px;
-        margin-bottom: 2rem;
-        margin-top: 1.5rem;
+        padding-bottom: 2rem;
+        padding-top: 1.5rem;
 
         .hideable {
           display: none;
@@ -27,7 +27,9 @@
 
     &--sub {
       color: $grey;
+      font-size: 24px;
       font-weight: 500;
+      padding-top: 1rem;
       transition: opacity .3s ease-in-out;
 
       &--hidden {

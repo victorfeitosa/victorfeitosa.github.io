@@ -3,12 +3,10 @@ import Helmet from 'react-helmet'
 import BigPic from '../components/BigPic'
 import Menu from '../components/Menu'
 import Copyright from '../components/Copyright'
-import SocialBar from '../components/SocialBar'
-import Tags from '../components/Tags'
 import SubTitle from '../components/SubTitle'
 
-import '../styles/reset.scss'
 import '../styles/Layout.scss'
+
 import { navigate, globalHistory } from '@reach/router'
 
 export class Layout extends React.Component {
@@ -46,16 +44,6 @@ export class Layout extends React.Component {
 
           <div className={'info-block' + (outsideHome ? ' info-block--small' : '')} >
             <SubTitle isSmall={outsideHome}/>
-            <Tags
-              isSmall={outsideHome}
-              tags={[
-                'Front End Developer',
-                'Gamer',
-                'Artist',
-                'Technology Enthusiast',
-              ]}
-            />
-            <SocialBar isSmall={outsideHome} />
           </div>
         </section>
 
