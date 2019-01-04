@@ -5,6 +5,10 @@
   padding-top: 4rem;
   text-align: center;
 
+  &--small {
+    padding-top: .5rem;
+  }
+
   .title {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: font-size .3s ease-in-out, opacity .3s ease-in-out;
@@ -16,7 +20,6 @@
 
       &--small {
         font-size: 26px;
-        padding-bottom: 2rem;
         padding-top: 1.5rem;
 
         .hideable {

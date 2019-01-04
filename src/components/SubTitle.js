@@ -7,7 +7,7 @@ import '../styles/SubTitle.scss'
 export default function SubTitle(props) {
   return (
     <>
-      <div className='title-container'>
+      <div className={'title-container' + (props.isSmall ? ' title-container--small' : '')}>
         <h2 className={'title title--main' + (props.isSmall ? ' title--main--small' : '')}>
           <span className='hideable'>Hello! My name is </span>
           Victor Feitosa
