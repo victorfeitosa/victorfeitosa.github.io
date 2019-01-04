@@ -1,6 +1,15 @@
+@import '../defaults/reset';
+@import '../defaults/defaults';
+@import '../defaults/colors';
+
 .cv-frame {
   box-sizing: border-box;
-  height: 100vh;
-  padding: .5rem 1rem;
+  height: calc(100vh - .25rem);
+  padding: .5rem 1rem .25rem;
   width: 100%;
+  transition: filter $d-animation;
+
+  &--blurred {
+    filter: blur(4px);
+  }
 }

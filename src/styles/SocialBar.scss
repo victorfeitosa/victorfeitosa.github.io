@@ -2,12 +2,16 @@
 @import './defaults/colors';
 
 .social-bar {
+  align-content: center;
+  align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 6rem 0 2rem;
 
   &--small {
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 12rem 0 2rem;
   }
 }

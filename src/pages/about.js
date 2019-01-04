@@ -1,7 +1,8 @@
 import React from 'react'
+import UnderConstruction from '../components/UnderConstruction'
 
 const About = () => (
-  <div> About </div>
+  <UnderConstruction />
 )
 
 export default About

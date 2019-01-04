@@ -1,7 +1,8 @@
 import React from 'react'
+import UnderConstruction from '../components/UnderConstruction'
 
 const Contact = () => (
-  <div> Contact </div>
+  <UnderConstruction />
 )
 
 export default Contact

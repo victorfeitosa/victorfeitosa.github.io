@@ -1,12 +1,21 @@
 @import './defaults/reset';
 @import './defaults/colors';
+@import './defaults/defaults';
+
+@keyframes bounce {
+  50% { transform: rotate(-8deg); }
+  100% { transform: rotate(0deg); }
+}
 
 .social-link {
   color: $grey;
   font-size: 40px;
-  margin: 0 1rem;
+  padding: 1rem;
+  transform-origin: center;
+  transition: color $d-animation;
 
-  &--small {
-    margin: 1rem 0;
+  &:hover {
+    animation: bounce $d-duration ease-in-out;
+    color: $highlight;
   }
 }

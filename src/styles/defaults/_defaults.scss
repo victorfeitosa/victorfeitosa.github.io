@@ -8,3 +8,6 @@ $short-duration: 100ms;
 $long-duration: 750ms;
 $x-long-duration: 1.2s;
 $xx-long-duration: 2s;
+
+// Animation eases
+$bounce-in-out: cubic-bezier(0, 1.15, 1, -.23);
