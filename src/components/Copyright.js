@@ -3,9 +3,9 @@ import '../styles/Copyright.scss'
 
 const Copyright = () => {
   return (
-    <div className='copyright'>
+    <h4 className='copyright'>
       &copy Victor Feitosa - 2018
-    </div>
+    </h4>
   )
 }
 

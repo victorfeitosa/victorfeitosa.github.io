@@ -1,8 +1,13 @@
 import React from 'react'
-import UnderConstruction from '../components/UnderConstruction'
+import { Title, SubTitle, Paragraph, TextImage } from '../components/PageElements'
+
 
 const About = () => (
-  <UnderConstruction />
+  <>
+    <Title>About Me</Title>
+    <SubTitle>And what I do</SubTitle>
+    <Paragraph>A paragraph</Paragraph> <TextImage />
+  </>
 )
 
 export default About

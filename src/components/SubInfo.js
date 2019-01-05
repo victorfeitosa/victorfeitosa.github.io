@@ -2,9 +2,9 @@ import React from 'react'
 import SocialBar from './SocialBar'
 import Tags from './Tags'
 
-import '../styles/SubTitle.scss'
+import '../styles/SubInfo.scss'
 
-export default function SubTitle(props) {
+export default function SubInfo(props) {
   return (
     <>
       <div className={'title-container' + (props.isSmall ? ' title-container--small' : '')}>

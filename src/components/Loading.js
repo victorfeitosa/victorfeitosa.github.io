@@ -3,11 +3,10 @@ import { FaSpinner } from 'react-icons/fa'
 
 import '../styles/Loading.scss'
 
-const Loading = (props) => {
-  const hasIcon = props.hasIcon === undefined ? true : props.hasIcon
+const Loading = ({hasIcon=true, children}) => {
   return (
     <div className='loading'>
-      {props.children} {hasIcon && <FaSpinner className='loading__spinner' />}
+      {children} {hasIcon && <FaSpinner className='loading__spinner' />}
     </div>
   )
 }

@@ -8,7 +8,8 @@ const SocialLink = (props) => {
       className={'social-link' + (props.isSmall ? ' social-link--small' : '')}
       href={props.to}
       target="_blank"
-      rel="noopener noreferrer">{props.icon}</a>
+      rel="noopener noreferrer">{props.icon}
+    </a>
   )
 }
 

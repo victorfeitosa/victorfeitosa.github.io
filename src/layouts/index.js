@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import BigPic from '../components/BigPic'
 import Menu from '../components/Menu'
 import Copyright from '../components/Copyright'
-import SubTitle from '../components/SubTitle'
+import SubInfo from '../components/SubInfo'
 
 import '../styles/Layout.scss'
 
@@ -43,7 +43,7 @@ export class Layout extends React.Component {
           <BigPic isSmall={outsideHome} src="" />
 
           <div className={'info-block' + (outsideHome ? ' info-block--small' : '')} >
-            <SubTitle isSmall={outsideHome}/>
+            <SubInfo isSmall={outsideHome}/>
           </div>
         </section>
 
