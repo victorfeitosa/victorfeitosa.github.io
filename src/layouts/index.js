@@ -4,10 +4,9 @@ import BigPic from '../components/BigPic'
 import Menu from '../components/Menu'
 import Copyright from '../components/Copyright'
 import SubInfo from '../components/SubInfo'
+import { navigate, globalHistory } from '@reach/router'
 
 import '../styles/Layout.scss'
-
-import { navigate, globalHistory } from '@reach/router'
 
 export class Layout extends React.Component {
   render() {

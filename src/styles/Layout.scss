@@ -39,15 +39,18 @@
   height: calc(100vh - .5rem);
   max-width: 0;
   min-width: 0;
+  opacity: 0;
   padding: .5rem;
   position: relative;
   transition: max-width $d-animation,
               min-width $d-animation,
+              opacity $d-animation,
               width $d-animation;
 
   &--open {
     max-width: calc(80% - 15%);
     min-width: calc(80% - 260px);
+    opacity: 1;
   }
 }
 
