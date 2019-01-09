@@ -5,6 +5,7 @@ import '../styles/SocialLink.scss'
 const SocialLink = (props) => {
   return (
     <a
+      title={props.title}
       className={'social-link' + (props.isSmall ? ' social-link--small' : '')}
       href={props.to}
       target="_blank"

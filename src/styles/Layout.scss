@@ -36,7 +36,7 @@
 }
 
 .page-section {
-  height: 100vh;
+  height: calc(100vh - .5rem);
   max-width: 0;
   min-width: 0;
   padding: .5rem;
