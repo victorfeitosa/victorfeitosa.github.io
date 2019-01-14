@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{157:function(e,r,a){"use strict";a.r(r);var c=a(0),o=a.n(c);a(161);r.default=function(){return o.a.createElement("div",null,o.a.createElement("iframe",{title:"Victor Feitosa CV",className:"cv-frame",src:"https://docs.google.com/viewer?srcid=1v8ofiUIQ7Iynv8DaS7Q1ipdcNT_dxXo-wcvBrSjaW6E&pid=explorer&efh=false&a=v&chrome=false&embedded=true",frameBorder:"0"}))}},161:function(e,r,a){}}]);
+//# sourceMappingURL=component---src-pages-cv-js-c41401a2bd026a10f9b2.js.map
