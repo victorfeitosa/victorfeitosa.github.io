@@ -4,13 +4,13 @@ import '../styles/PageElements.scss'
 
 
 export const PageMain = ({children}) => (
-  <main className='main'>
+  <main className='page-main'>
     {children}
   </main>
 )
 
 export const PageSection = ({children}) => (
-  <section className='section'>
+  <section className='page-section'>
     {children}
   </section>
 )
@@ -27,6 +27,10 @@ export const SubTitle = ({children}) => (
 
 export const Paragraph = ({children}) => (
   <p className='paragraph'>{children}</p>
+)
+
+export const Pre = () => (
+  <>&nbsp;&nbsp;&nbsp;&nbsp;</>
 )
 
 export const TextBlock = ({children}) => (
