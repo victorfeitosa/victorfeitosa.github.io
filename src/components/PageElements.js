@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import '../styles/PageElements.scss'
 
@@ -15,6 +16,17 @@ export const PageSection = ({children}) => (
   </section>
 )
 
+export const PageSectionContainer = ({width='full', children}) => {
+  const className = `page-section__container page-section__container--${width}`
+  return (
+    <div className={className}>{children}</div>
+  )
+}
+
+PageSection.propTypes = {
+  width: PropTypes.oneOf(['full', 'half', 'third'])
+}
+
 export const Title = ({children, icon: Icon=null}) => (
   <div className='title'>
     {Icon}&nbsp;<h2 className='title__text'>{children}</h2>
@@ -25,12 +37,14 @@ export const SubTitle = ({children}) => (
   <h3 className='subtitle'>{children}</h3>
 )
 
-export const Paragraph = ({children}) => (
-  <p className='paragraph'>{children}</p>
+export const Pre = () => (
+  <>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  </>
 )
 
-export const Pre = () => (
-  <>&nbsp;&nbsp;&nbsp;&nbsp;</>
+export const Paragraph = ({children}) => (
+  <p className='paragraph'><Pre />{children}</p>
 )
 
 export const TextBlock = ({children}) => (

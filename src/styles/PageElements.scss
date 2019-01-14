@@ -4,17 +4,35 @@
 
 .page-main {
   padding: 1rem;
-}
 
-.page-section {
+  .page-section {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__container,
+    &__container--full {
+      max-width: 98%;
+    }
+
+    &__container--half {
+      max-width: 48%;
+    }
+
+    &__container--third {
+      max-width: 32%;
+    }
+  }
+
   .title {
     color: $contrast;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 32px;
     font-weight: bold;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 
-    &:after {
+    &::after {
       background-color: $contrast;
       content: '';
       height: 2px;
@@ -29,7 +47,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 24px;
     font-weight: 500;
-    padding-bottom: .5rem;
+    padding: 1rem 0 0;
   }
 
   .paragraph {
