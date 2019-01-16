@@ -2,20 +2,25 @@
 @import './defaults/colors';
 @import './defaults/defaults';
 
-@keyframes bounce {
-  50% { transform: rotate(-8deg); }
-  100% { transform: rotate(0deg); }
+@keyframes shake {
+  25% { transform: rotate(8deg); }
+  75% { transform: rotate(-8deg); }
+  100% { transform: rotate(0); }
 }
 
 .social-link {
   color: $grey;
   font-size: 40px;
   padding: 1rem;
-  transform-origin: center;
   transition: color $d-animation;
 
-  &:hover {
-    animation: bounce $d-animation;
+  svg {
+    transform-origin: center;
+    transition: transform $d-animation;
+  }
+
+  &:hover svg {
+    animation: shake $d-animation;
     color: $highlight;
   }
 }

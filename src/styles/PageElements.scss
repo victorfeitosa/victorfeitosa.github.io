@@ -105,13 +105,14 @@
         width: 100%;
       }
 
-      @keyframes bounce {
-        50% { transform: translateY(0) rotate(-8deg); }
-        100% { transform: translateY(20%) rotate(0deg); }
+      @keyframes shake {
+        25% { transform: rotate(8deg); }
+        75% { transform: rotate(-8deg); }
+        100% { transform: rotate(0); }
       }
 
       .page-link__icon {
-        animation: bounce $d-animation $d-duration;
+        animation: shake $d-animation $d-duration;
       }
     }
   }
