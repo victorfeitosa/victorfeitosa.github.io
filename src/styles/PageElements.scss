@@ -87,7 +87,7 @@
         content: '';
         height: 2px;
         position: absolute;
-        transition: width $d-animation;
+        transition: width $d-duration ease-in;
         width: 0;
       }
     }
@@ -97,7 +97,8 @@
       margin-left: .5rem;
       text-align: center;
       transform: translateY(20%);
-      transform-origin: center;
+
+      transform-origin: bottom;
     }
 
     &:hover {
