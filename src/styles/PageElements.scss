@@ -6,22 +6,26 @@
   padding: 1rem;
 
   .page-section {
-    align-items: center;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    padding: 1rem;
 
     &__container,
     &__container--full {
-      max-width: 98%;
+      width: 98%;
+    }
+
+    &__container--two-thirds {
+      width: 64%;
     }
 
     &__container--half {
-      max-width: 48%;
+      width: 48%;
     }
 
     &__container--third {
-      max-width: 32%;
+      width: 32%;
     }
   }
 
@@ -44,6 +48,7 @@
 
   .subtitle {
     color: $grey;
+    display: inline-block;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 24px;
     font-weight: 500;
@@ -57,6 +62,58 @@
     padding: 1rem;
     text-align: justify;
     white-space: pre-wrap;
+  }
+
+  .page-link {
+    color: $contrast;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 1rem 0;
+
+    &__anchor {
+      color: $contrast;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      padding-left: .25rem;
+      position: relative;
+      text-decoration: none;
+
+      &::before {
+        background-color: $contrast;
+        bottom: -2px;
+        content: '';
+        height: 2px;
+        position: absolute;
+        transition: width $d-animation;
+        width: 0;
+      }
+    }
+
+    &__icon {
+      font-weight: bold;
+      margin-left: .5rem;
+      text-align: center;
+      transform: translateY(20%);
+      transform-origin: center;
+    }
+
+    &:hover {
+      .page-link__anchor::before {
+        width: 100%;
+      }
+
+      @keyframes bounce {
+        50% { transform: translateY(0) rotate(-8deg); }
+        100% { transform: translateY(20%) rotate(0deg); }
+      }
+
+      .page-link__icon {
+        animation: bounce $d-animation $d-duration;
+      }
+    }
   }
 }
 

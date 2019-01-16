@@ -3,9 +3,10 @@
 @import './defaults/defaults';
 
 .main-layout {
+  box-sizing: border-box;
   display: flex;
   height: 100vh;
-  min-height: 768px;
+  min-height: 720px;
 }
 
 .profile-section {
@@ -35,16 +36,17 @@
   }
 }
 
-.page-section {
-  height: calc(100vh - .5rem);
+.content-section {
+  height: 100%;
   max-width: 0;
   min-width: 0;
   opacity: 0;
+  overflow-y: auto;
   padding: .5rem;
   position: relative;
   transition: max-width $d-animation,
               min-width $d-animation,
-              opacity $d-animation,
+              opacity $x-long-duration ease-in-out,
               width $d-animation;
 
   &--open {

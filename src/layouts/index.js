@@ -48,8 +48,8 @@ export class Layout extends React.Component {
 
         {/* NOTE: Page section where pages are loaded */}
         <section className={
-            'page-section' +
-            (outsideHome ? ' page-section--open' : '')
+            'content-section' +
+            (outsideHome ? ' content-section--open' : '')
           }>
           {this.props.children}
         </section>

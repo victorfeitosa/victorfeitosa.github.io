@@ -1,5 +1,6 @@
 import React from 'react'
-import { Title, SubTitle, Paragraph, TextImage, PageMain } from '../components/PageElements'
+import { Title, SubTitle, Paragraph, TextImage, PageMain, PageLink } from '../components/PageElements'
+import { FaEnvelope } from 'react-icons/fa'
 
 
 const About = () => (
@@ -18,7 +19,7 @@ const About = () => (
     </Paragraph>
     <SubTitle>Contact me!</SubTitle>
     <Paragraph>
-      I'm always available! Please take a look at my networks and other links, there's always new things on Behance and Github!
+      I'm always available! Please take a look at my networks and other links, there's always new things on Behance and Github! Contact me at <PageLink icon={FaEnvelope} iconPosition='after'>victor.rm.feitosa@outlook.com</PageLink>
     </Paragraph>
     <TextImage />
   </PageMain>

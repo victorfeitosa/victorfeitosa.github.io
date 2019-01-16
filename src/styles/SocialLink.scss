@@ -15,7 +15,7 @@
   transition: color $d-animation;
 
   &:hover {
-    animation: bounce $d-duration ease-in-out;
+    animation: bounce $d-animation;
     color: $highlight;
   }
 }

@@ -18,9 +18,7 @@ export const PageSection = ({children}) => (
 
 export const PageSectionContainer = ({width='full', children}) => {
   const className = `page-section__container page-section__container--${width}`
-  return (
-    <div className={className}>{children}</div>
-  )
+  return <div className={className}>{children}</div>
 }
 
 PageSection.propTypes = {
@@ -36,6 +34,19 @@ export const Title = ({children, icon: Icon=null}) => (
 export const SubTitle = ({children}) => (
   <h3 className='subtitle'>{children}</h3>
 )
+
+export const PageLink = ({to, icon: Icon, iconPosition='before', children}) => {
+  const iconBefore = Icon && iconPosition==='before'
+  const iconAfter = Icon && iconPosition==='after'
+  const iconClass = 'page-link__icon'
+  return (
+    <div className='page-link'>
+      {iconBefore && <Icon className={iconClass} />}
+      <a href={to} className='page-link__anchor'>{children}</a>
+      {iconAfter && <Icon className={iconClass} />}
+    </div>
+  )
+}
 
 export const Pre = () => (
   <>

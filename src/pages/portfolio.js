@@ -1,7 +1,9 @@
 import React from 'react'
 
+import UnderConstruction from '../components/UnderConstruction'
+
 const Portfolio = () => (
-  <div> Portfolio </div>
+<UnderConstruction />
 )
 
 export default Portfolio
