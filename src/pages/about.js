@@ -19,7 +19,7 @@ const About = () => (
     </Paragraph>
     <SubTitle>Contact me!</SubTitle>
     <Paragraph>
-      I'm always available! Please take a look at my networks and other links, there's always new things on Behance and Github! Contact me at <PageLink icon={FaEnvelope} iconPosition='after'>victor.rm.feitosa@outlook.com</PageLink>
+      I'm always available! Please take a look at my networks and other links, there's always new things on Behance and Github! Contact me (Skype & Email) at <PageLink icon={FaEnvelope} iconPosition='after'>victor.rm.feitosa@outlook.com</PageLink>
     </Paragraph>
     <TextImage />
   </PageMain>
