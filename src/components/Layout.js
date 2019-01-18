@@ -13,7 +13,7 @@ export class Layout extends React.Component {
     const outsideHome = globalHistory.location.pathname !== '/'
     console.log('Outside Home', outsideHome)
     return (
-      <div className="main-layout">
+      <div className='main-layout'>
         <Helmet
           title="Victor Feitosa Web Portfolio"
           meta={[
