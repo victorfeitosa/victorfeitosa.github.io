@@ -13,8 +13,7 @@ export class Layout extends React.Component {
     const outsideHome = globalHistory.location.pathname !== '/'
     console.log('Outside Home', outsideHome)
     return (
-      <>
-      <div className='main-layout'>
+      <div>
         <Helmet
           title="Victor Feitosa Web Portfolio"
           meta={[
@@ -31,38 +30,39 @@ export class Layout extends React.Component {
         >
           <html lang="en" />
         </Helmet>
-        {/* NOTE: Purple section containing profile */}
-        <section
-          onClick={() => {
-            navigate('/')
-          }}
-          className={
-            'profile-section' +
-            (outsideHome ? ' profile-section--open' : '')
-          }
-        >
-          <BigPic isSmall={outsideHome} src="" />
+        <div className='main-layout'>
+          {/* NOTE: Purple section containing profile */}
+          <section
+            onClick={() => {
+              navigate('/')
+            }}
+            className={
+              'profile-section' +
+              (outsideHome ? ' profile-section--open' : '')
+            }
+          >
+            <BigPic isSmall={outsideHome} src="" />
 
-          <div className={'info-block' + (outsideHome ? ' info-block--small' : '')} >
-            <SubInfo isSmall={outsideHome}/>
-          </div>
-        </section>
+            <div className={'info-block' + (outsideHome ? ' info-block--small' : '')} >
+              <SubInfo isSmall={outsideHome} />
+            </div>
+          </section>
 
-        {/* NOTE: Page section where pages are loaded */}
-        <section className={
+          {/* NOTE: Page section where pages are loaded */}
+          <section className={
             'content-section' +
             (outsideHome ? ' content-section--open' : '')
           }>
-          {this.props.children}
-        </section>
+            {this.props.children}
+          </section>
 
-        {/* NOTE: Menu section */}
-        <section className='menu-section'>
-          <Menu />
-          <Copyright />
-        </section>
+          {/* NOTE: Menu section */}
+          <section className='menu-section'>
+            <Menu />
+            <Copyright />
+          </section>
+        </div>
       </div>
-      </>
     )
   }
 }
