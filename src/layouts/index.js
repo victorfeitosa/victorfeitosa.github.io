@@ -11,6 +11,7 @@ import '../styles/Layout.scss'
 export class Layout extends React.Component {
   render() {
     const outsideHome = globalHistory.location.pathname !== '/'
+    console.log('Outside Home', outsideHome)
     return (
       <div className="main-layout">
         <Helmet

@@ -40,11 +40,11 @@ export const PageLink = ({to, icon: Icon, iconPosition='before', children}) => {
   const iconAfter = Icon && iconPosition==='after'
   const iconClass = 'page-link__icon'
   return (
-    <div className='page-link'>
+    <span className='page-link'>
       {iconBefore && <Icon className={iconClass} />}
       <a href={to} className='page-link__anchor'>{children}</a>
       {iconAfter && <Icon className={iconClass} />}
-    </div>
+    </span>
   )
 }
 
