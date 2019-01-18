@@ -14,22 +14,6 @@ export class Layout extends React.Component {
     console.log('Outside Home', outsideHome)
     return (
       <div className='main-layout'>
-        <Helmet
-          title="Victor Feitosa Web Portfolio"
-          meta={[
-            {
-              name: 'description',
-              content: 'Victor Feitosa Portfolio Website',
-            },
-            {
-              name: 'keywords',
-              content:
-                'victor, feitosa, victorfeitosa, porftolio, front, end, frontend, front-end, development, design, webdesign, web-design',
-            },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
         {/* NOTE: Purple section containing profile */}
         <section
           onClick={() => {
