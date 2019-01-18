@@ -4,7 +4,7 @@
 
 .cv-frame {
   box-sizing: border-box;
-  height: 100%;
+  height: calc(100% - .25rem);
   padding: .5rem 1rem .25rem;
   transition: filter $d-animation;
   width: 100%;

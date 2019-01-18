@@ -10,7 +10,6 @@ export class CV extends React.Component {
     this.state = { loaded: false }
   }
   setLoaded = () => {
-    console.log('LOADED')
     this.setState({
       loaded: true
     })

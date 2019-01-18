@@ -1,9 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import BigPic from '../components/BigPic'
-import Menu from '../components/Menu'
-import Copyright from '../components/Copyright'
-import SubInfo from '../components/SubInfo'
+import BigPic from './BigPic'
+import Menu from './Menu'
+import Copyright from './Copyright'
+import SubInfo from './SubInfo'
 import { navigate, globalHistory } from '@reach/router'
 
 import '../styles/Layout.scss'
