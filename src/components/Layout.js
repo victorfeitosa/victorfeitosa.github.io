@@ -4,7 +4,7 @@ import BigPic from './BigPic'
 import Menu from './Menu'
 import Copyright from './Copyright'
 import SubInfo from './SubInfo'
-import { navigate, globalHistory, Redirect } from '@reach/router'
+import { navigate, globalHistory } from '@reach/router'
 
 import '../styles/Layout.scss'
 
@@ -17,17 +17,8 @@ export class Layout extends React.Component {
     }
   }
 
-  onComponentDidMount() {
-    if (!this.state.entered) {
-      this.setState({ entered: true })
-    }
-  }
-
   render() {
     const outsideHome = globalHistory.location.pathname !== '/'
-    if (outsideHome && !this.state.entered) {
-      return <Redirect to='/' />
-    }
     return (
       <div>
         <Helmet
