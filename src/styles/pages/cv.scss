@@ -2,14 +2,18 @@
 @import '../defaults/defaults';
 @import '../defaults/colors';
 
-.cv-frame {
-  box-sizing: border-box;
+.cv {
   height: calc(100% - .25rem);
-  padding: .5rem 1rem .25rem;
-  transition: filter $d-animation;
   width: 100%;
+  &__frame {
+    box-sizing: border-box;
+    height: 100%;
+    padding: .5rem 1rem .25rem;
+    transition: filter $d-animation;
+    width: 100%;
 
-  &--blurred {
-    filter: blur(4px);
-  }
+    &--blurred {
+      filter: blur(4px);
+    }
+   }
 }

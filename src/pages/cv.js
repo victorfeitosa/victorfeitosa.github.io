@@ -16,16 +16,16 @@ export class CV extends React.Component {
   }
   render () {
     return (
-      <>
+      <div className='cv'>
         {!this.state.loaded && <Loading>Loading CV</Loading>}
         <iframe
           title="Victor Feitosa CV"
-          className={'cv-frame' + (!this.state.loaded ? ' cv-frame--blurred' : '')}
+          className={'cv__frame' + (!this.state.loaded ? ' cv-frame--blurred' : '')}
           src='https://docs.google.com/viewer?srcid=1v8ofiUIQ7Iynv8DaS7Q1ipdcNT_dxXo-wcvBrSjaW6E&pid=explorer&efh=false&a=v&chrome=false&embedded=true'
           frameBorder='0'
           onLoad={this.setLoaded}>
         </iframe>
-      </>
+      </div>
     )
   }
 }
