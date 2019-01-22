@@ -20,7 +20,6 @@ export class Layout extends React.Component {
   componentDidMount() {
     if(!this.state.layoutRendered) {
       this.setState({ layoutRendered: true })
-      console.log('Layout Rendered')
     }
   }
 
@@ -70,7 +69,7 @@ export class Layout extends React.Component {
             'content-section' +
             (outsideHome ? ' content-section--open' : '')
           }>
-            {layoutRendered && children}
+            {layoutRendered ? children : ''}
           </section>
 
           {/* NOTE: Menu section */}
