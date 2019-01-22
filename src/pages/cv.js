@@ -16,7 +16,7 @@ export class CV extends React.Component {
   }
   render () {
     return (
-      <div>
+      <>
         {!this.state.loaded && <Loading>Loading CV</Loading>}
         <iframe
           title="Victor Feitosa CV"
@@ -25,7 +25,7 @@ export class CV extends React.Component {
           frameBorder='0'
           onLoad={this.setLoaded}>
         </iframe>
-      </div>
+      </>
     )
   }
 }
