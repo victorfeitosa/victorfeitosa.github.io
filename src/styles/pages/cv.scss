@@ -5,6 +5,7 @@
 .cv {
   height: calc(100% - .25rem);
   width: 100%;
+  position: relative;
   &__frame {
     box-sizing: border-box;
     height: 100%;

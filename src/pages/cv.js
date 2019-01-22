@@ -17,6 +17,7 @@ export class CV extends React.Component {
   render () {
     return (
       <div className='cv'>
+        {!this.state.loaded && <Loading>Loading CV</Loading>}
         <iframe
           title="Victor Feitosa CV"
           className={'cv__frame' + (!this.state.loaded ? ' cv-frame--blurred' : '')}
