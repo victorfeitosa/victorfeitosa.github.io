@@ -20,6 +20,7 @@ export class Layout extends React.Component {
   componentDidMount() {
     if(!this.state.layoutRendered) {
       this.setState({ layoutRendered: true })
+      console.log('Layout Rendered')
     }
   }
 
