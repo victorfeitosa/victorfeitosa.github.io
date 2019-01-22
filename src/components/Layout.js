@@ -13,12 +13,21 @@ export class Layout extends React.Component {
     super(props)
 
     this.state = {
-      entered: false
+      layoutRendered: false
+    }
+  }
+
+  componentDidMount() {
+    if(!this.state.layoutRendered) {
+      this.setState({ layoutRendered: true })
     }
   }
 
   render() {
     const outsideHome = globalHistory.location.pathname !== '/'
+    const layoutRendered = this.state.layoutRendered
+    const children = this.props.children
+
     return (
       <div>
         <Helmet
@@ -60,7 +69,7 @@ export class Layout extends React.Component {
             'content-section' +
             (outsideHome ? ' content-section--open' : '')
           }>
-            {this.props.children}
+            {layoutRendered && children}
           </section>
 
           {/* NOTE: Menu section */}
