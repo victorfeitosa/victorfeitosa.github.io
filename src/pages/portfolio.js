@@ -1,9 +1,10 @@
 import React from 'react'
-
-import UnderConstruction from '../components/UnderConstruction'
+import { PageMain, FeatureImage, Title, SubTitle } from '../components/PageElements'
 
 const Portfolio = () => (
-<UnderConstruction />
+  <PageMain>
+    <Title>My Stuff</Title>
+  </PageMain>
 )
 
 export default Portfolio
