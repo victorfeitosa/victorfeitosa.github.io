@@ -1,0 +1,49 @@
+@import './defaults/reset';
+@import './defaults/colors';
+@import './defaults/defaults';
+
+@keyframes shake {
+  25% { transform: rotate(8deg); }
+  75% { transform: rotate(-8deg); }
+  100% { transform: rotate(0); }
+}
+
+.portfolio-link {
+  align-items: center;
+  display: flex;
+
+  &__header {
+    color: $background;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    padding-bottom: .5rem;
+
+    transition: color $d-animation;
+  }
+
+  &:hover & {
+    &__header {
+      color: $highlight;
+    }
+  }
+
+  .social-link {
+    color: $background;
+    font-size: 32px;
+
+    svg {
+      transform-origin: center;
+    }
+  }
+
+  &:hover {
+    .social-link {
+      color: $highlight;
+
+      svg {
+        animation: shake $d-animation;
+        animation-delay: $d-duration;
+      }
+    }
+  }
+}
