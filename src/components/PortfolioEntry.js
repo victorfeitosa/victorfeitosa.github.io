@@ -21,8 +21,8 @@ const PortfolioEntry = ({ title, image, children, links, badges }) => {
     <div className='portfolio-entry'>
       <div className='portfolio-entry__block-area'>
         <img src={image} alt={title} className='portfolio-entry__image'/>
+        <h2 className='portfolio-entry__title'>{title}</h2>
         <div  className='portfolio-entry__header'>
-          <h2 className='portfolio-entry__title'>{title}</h2>
           <div className='portfolio-entry__links'>
           {
             links && links.map((link, key) => {

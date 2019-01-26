@@ -21,12 +21,6 @@
     transition: color $d-animation;
   }
 
-  &:hover & {
-    &__header {
-      color: $highlight;
-    }
-  }
-
   .social-link {
     color: $background;
     font-size: 32px;
@@ -39,11 +33,84 @@
   &:hover {
     .social-link {
       color: $highlight;
-
+  
       svg {
         animation: shake $d-animation;
         animation-delay: $d-duration;
       }
+    }
+
+  }
+}
+
+
+.portfolio-badge {
+  background-color: $contrast;
+  border-radius: 12px / 50%;
+  color: $background;
+  display: inline-block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: .75rem;
+  margin: 0 .5rem;
+  padding: .35rem .5rem .5rem;
+  text-align: center;
+}
+
+.portfolio-entry {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__block-area {
+    display: flex;
+    position: relative;
+    padding-bottom: .75rem;
+  }
+
+  &__image {
+    height: 10rem;
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
+  }
+
+  &__header {
+    background-color: $base;
+    clip-path: polygon(95% 0%, 100% 0%, 100% 100%, 88% 100%);
+    height: 10rem;
+    position: absolute;
+    right: 0;
+    transition: clip-path $d-animation;
+    width: 100%;
+  }
+
+  &__title {
+    background-color: $base;
+    bottom: 1.75rem;
+    clip-path: polygon(6% 0%, 100% 0%, 100% 100%, 0% 100%);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding: .25rem 3rem .5rem;
+    position: absolute;
+    right: 0;
+    transform: translate3d(0, 0, 0);
+    transition: color $d-animation,
+                transform $d-animation;
+    z-index: 1;
+  }
+
+  &:hover & {
+    &__header {
+      clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 33% 100%);
+    }
+
+    &__title {
+      color: $highlight;
+      transform: translate3d(-130%, 0, 0);
     }
   }
 }
