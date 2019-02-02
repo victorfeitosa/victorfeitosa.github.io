@@ -1,11 +1,8 @@
-@import './defaults/reset';
-@import './defaults/colors';
-
 .copyright {
   align-self: center;
   bottom: 0;
   color: $contrast;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: $d-font-family;
   font-size: 90%;
   font-weight: 400;
   padding: .5rem;

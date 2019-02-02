@@ -2,8 +2,6 @@ import React from 'react'
 import SocialBar from './SocialBar'
 import Tags from './Tags'
 
-import '../styles/SubInfo.scss'
-
 export default function SubInfo(props) {
   return (
     <>

@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import '../styles/PageElements.scss'
-
 
 export const PageMain = ({children}) => (
   <main className='page-main'>

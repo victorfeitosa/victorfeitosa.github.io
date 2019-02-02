@@ -1,5 +1,4 @@
 import React from 'react'
-import '../styles/Copyright.scss'
 
 const Copyright = () => {
   return (

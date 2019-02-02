@@ -6,7 +6,7 @@ import Copyright from './Copyright'
 import SubInfo from './SubInfo'
 import { navigate, globalHistory } from '@reach/router'
 
-import '../styles/Layout.scss'
+import '../styles/styles.scss';
 
 export class Layout extends React.Component {
   render() {
@@ -42,7 +42,7 @@ export class Layout extends React.Component {
                 (outsideHome ? ' profile-section--open' : '')
               }
             >
-              <BigPic isSmall={outsideHome} src="" />
+              <BigPic isSmall={outsideHome} />
 
               <div className={'info-block' + (outsideHome ? ' info-block--small' : '')} >
                 <SubInfo isSmall={outsideHome} />

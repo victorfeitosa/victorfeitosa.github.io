@@ -1,8 +1,6 @@
 import React from 'react'
 import MenuItem from './MenuItem'
 
-import '../styles/Menu.scss'
-
 function Menu() {
   return (
     <div className='menu-container'>

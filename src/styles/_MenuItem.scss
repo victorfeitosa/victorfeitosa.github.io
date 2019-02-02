@@ -1,12 +1,9 @@
-@import './defaults/reset';
-@import './defaults/colors';
-
 .menu-item {
   box-sizing: border-box;
   color: $base;
   display: block;
 
-  font-family: 'Segoe UI', Helvetica, Tahoma, Geneva, Verdana, sans-serif;
+  font-family: $d-font-family;
   font-size: 180%;
 
   padding: 1rem 2rem;

@@ -1,7 +1,3 @@
-@import './defaults/reset';
-@import './defaults/colors';
-@import './defaults/defaults';
-
 .page-main {
   padding: 1rem;
 
@@ -31,7 +27,7 @@
 
   .title {
     color: $contrast;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: $d-font-family;
     font-size: 32px;
     font-weight: bold;
     padding-bottom: 2rem;
@@ -49,7 +45,7 @@
   .subtitle {
     color: $grey;
     display: inline-block;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: $d-font-family;
     font-size: 24px;
     font-weight: 500;
     padding: 1rem 0 0;
@@ -67,14 +63,14 @@
   .page-link {
     color: $contrast;
     display: inline-block;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: $d-font-family;
     font-size: 16px;
     font-weight: 500;
     padding: 1rem 0;
 
     &__anchor {
       color: $contrast;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: $d-font-family;
       font-size: 16px;
       font-weight: 500;
       padding-left: .25rem;

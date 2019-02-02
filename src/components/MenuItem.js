@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import '../styles/MenuItem.scss'
-
 const isPartiallyActive = ({
   isPartiallyCurrent
 }) => {

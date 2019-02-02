@@ -1,8 +1,6 @@
 import React from 'react'
 import Loading from '../components/Loading'
 
-import '../styles/pages/cv.scss'
-
 export class CV extends React.Component {
   constructor (props) {
     super(props)

@@ -2,8 +2,6 @@ import React from 'react'
 import SocialLink from './SocialLink'
 import { FaGithub, FaLinkedin, FaBehanceSquare, FaTwitter } from 'react-icons/fa'
 
-import '../styles/SocialBar.scss'
-
 const SocialBar = (props) => {
   return (
     <div className={'social-bar' + (props.isSmall ? ' social-bar--small' : '')}>

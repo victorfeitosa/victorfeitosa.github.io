@@ -2,8 +2,6 @@ import React from 'react'
 import PropType from 'prop-types'
 import SocialLink from './SocialLink'
 
-import '../styles/PortfolioEntry.scss'
-
 const PortfolioLink = ({ icon, to, children, title }) => (
   <div className='portfolio-link'>
     <SocialLink to={to} icon={icon} title={title} />&nbsp;<h2 className='portfolio-link__header'>{ children }</h2>
