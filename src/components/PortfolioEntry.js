@@ -24,7 +24,15 @@ const PortfolioEntry = ({ title, image, children, links, badges }) => {
           <div className='portfolio-entry__links'>
           {
             links && links.map((link, key) => {
-              return <PortfolioLink key={key} to={link.to} icon={link.icon} title={link.title}>{link.text}</PortfolioLink>
+              return (
+              <PortfolioLink
+                key={key}
+                to={link.to}
+                icon={link.icon}
+                title={link.title}
+              >
+                {link.text}
+              </PortfolioLink>)
             })
           }
           </div>
