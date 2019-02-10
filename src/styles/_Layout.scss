@@ -30,6 +30,14 @@
     transition: width $d-animation;
     width: 100%;
   }
+
+  @media only screen and (max-width: $large-breakpoint) {
+    &--open {
+      clip-path: none;
+      overflow: hidden;
+      width: 120px;
+    }
+  }
 }
 
 .content-section {
@@ -49,7 +57,12 @@
     max-width: calc(80% - 15%);
     min-width: calc(80% - 260px);
     opacity: 1;
+    @media only screen and (max-width: $large-breakpoint) {
+      max-width: calc(80% - 12%);
+      min-width: calc(80% - 180px);
+    }
   }
+
 }
 
 .menu-section {
@@ -58,9 +71,13 @@
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  max-width: 15%;
-  min-width: 220px;
+  max-width: 14%;
+  min-width: 160px;
   position: absolute;
   right: 0;
   width: 15%;
+
+  @media only screen and (max-width: $large-breakpoint) {
+    min-width: 220px;
+  }
 }

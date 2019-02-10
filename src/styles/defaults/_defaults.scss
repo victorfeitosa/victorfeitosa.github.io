@@ -14,3 +14,8 @@ $bounce-in-out: cubic-bezier(0, 1.15, 1, -.23);
 
 // Fonts
 $d-font-family: 'Segoe UI', Helvetica, Tahoma, Geneva, Verdana, sans-serif;
+
+// Media queries
+$large-breakpoint: 1024px;
+$medium-breakpoint: 768px;
+$small-breakpoint: 500px;

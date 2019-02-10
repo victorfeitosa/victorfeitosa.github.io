@@ -37,6 +37,15 @@
         content: '';
         display: none;
       }
+
+      @media only screen and (max-width: $large-breakpoint) {
+        margin-bottom: .5rem;
+      }
     }
+  }
+
+  @media only screen and (max-width: $large-breakpoint) {
+    height: auto;
+    padding-top: 1.5rem;
   }
 }

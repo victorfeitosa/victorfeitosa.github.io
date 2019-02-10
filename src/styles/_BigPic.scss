@@ -1,5 +1,7 @@
 $img-size: 400px;
 $img-size-sm: 180px;
+$img-size-xsm: 100px;
+
 .big-pic {
   background-image: url(../images/profile.jpg);
   background-position: center;
@@ -24,5 +26,15 @@ $img-size-sm: 180px;
     min-height: $img-size-sm;
     min-width: $img-size-sm;
     width: $img-size-sm;
+  }
+
+  @media only screen and (max-width: $large-breakpoint) {
+    &--small {
+      height: $img-size-xsm;
+      margin-top: .5rem;
+      min-height: $img-size-xsm;
+      min-width: $img-size-xsm;
+      width: $img-size-xsm;
+    }
   }
 }

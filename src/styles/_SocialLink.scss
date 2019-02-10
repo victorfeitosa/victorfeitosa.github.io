@@ -19,4 +19,8 @@
     animation: shake $d-animation;
     color: $highlight;
   }
+
+  @media only screen and (max-width: $large-breakpoint) {
+    font-size: 36px;
+  }
 }
