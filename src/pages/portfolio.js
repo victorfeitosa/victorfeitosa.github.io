@@ -2,7 +2,10 @@ import React from 'react'
 import { FaGithub, FaHome, FaRocket } from 'react-icons/fa'
 import { PageMain, Title, SubTitle, PageSection, PageSectionContainer } from '../components/PageElements'
 import PortfolioEntry from '../components/PortfolioEntry'
+
 import websiteImage from '../images/website.jpg'
+import expensemanImage from '../images/expenseman.jpg'
+import oldprojsImage from '../images/oldprojs.jpg'
 
 const Portfolio = () => (
   <PageMain>
@@ -20,7 +23,7 @@ const Portfolio = () => (
         <p>This website you're visiting was made entirely in React with GatsbyJS. It is intended to be updated constantly and soon will have a mobile version and a PWA. All styles colors and design are entirely by me. Visit it's GitHub page to check out the source code.</p>
       </PortfolioEntry>
       <PortfolioEntry
-        image={websiteImage}
+        image={expensemanImage}
         title='Expense Manager App'
         links={[
           { to: 'https://github.com/victorfeitosa/ExpenseManager', icon: <FaGithub />, title: 'Github', text: 'Repository'},
@@ -33,7 +36,7 @@ const Portfolio = () => (
         <p>This app records expenses the user had and filters them in a date span. It is mobile-first and soon will be a PWA. This was done so I could learn React and Firebase, so  it's pretty simple!</p>
       </PortfolioEntry>
       <PortfolioEntry
-        image={websiteImage}
+        image={oldprojsImage}
         title='Old FrontEnd Projects'
         links={[
           { to: 'https://github.com/victorfeitosa/OldFrontendProjects', icon: <FaGithub />, title: 'Github', text: 'Repository'},

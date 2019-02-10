@@ -80,9 +80,10 @@
   width: 100%;
 
   &__block-area {
-    display: flex;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, .15);
+  display: flex;
     position: relative;
-    padding-bottom: .75rem;
+    margin-bottom: .75rem;
   }
 
   &__image {
