@@ -4,10 +4,6 @@
   100% { transform: rotate(0); }
 }
 
-// * {
-//   border: 1px solid lightblue !important;
-// }
-
 .portfolio-link {
   align-items: center;
   display: flex;
@@ -39,6 +35,7 @@
 
   &:hover {
     cursor: pointer;
+
     .social-link {
       color: $highlight;
 
@@ -91,7 +88,8 @@
     object-fit: cover;
     object-position: top center;
     width: 100%;
-    transition: width $d-animation;
+    transition: width $d-animation,
+                filter $d-animation;
   }
 
   &__header {
@@ -155,6 +153,7 @@
 
   &__block-area:hover {
     .portfolio-entry__image {
+      filter: brightness(35%);
       width: 75%;
     }
 
