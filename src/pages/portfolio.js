@@ -1,13 +1,12 @@
 import React from 'react'
-import { FaGithub, FaHome } from 'react-icons/fa'
-import { PageMain, FeatureImage, Title, SubTitle, PageSection, PageSectionContainer } from '../components/PageElements'
+import { FaGithub, FaHome, FaRocket } from 'react-icons/fa'
+import { PageMain, Title, SubTitle, PageSection, PageSectionContainer } from '../components/PageElements'
 import PortfolioEntry from '../components/PortfolioEntry'
 import websiteImage from '../images/website.jpg'
 
 const Portfolio = () => (
   <PageMain>
     <Title>Portfolio</Title>
-    <PageSection>
       <PortfolioEntry
         image={websiteImage}
         title='My Website'
@@ -15,12 +14,36 @@ const Portfolio = () => (
           { to: 'https://github.com/victorfeitosa/victorfeitosa.github.io', icon: <FaGithub />, title: 'Github', text: 'Repository'},
           { to: 'https://victorfeitosa.github.io', icon: <FaHome />, title: 'Home', text: 'Home'}
         ]}
-        badges={['Website', 'Portfolio', 'React', 'GatsbyJS', 'SCSS']}
+        badges={['GatsbyJS', 'Portfolio', 'React', 'SCSS', 'Website']}
       >
-        <p>Cras erat eros, facilisis a mollis a, placerat venenatis mi. Nam faucibus turpis velit, quis convallis turpis aliquam vitae. Donec faucibus rhoncus posuere. Nulla et diam nibh. Proin tempor massa urna, vitae volutpat orci laoreet nec. Nunc consectetur laoreet massa, vitae vehicula dui luctus in. Etiam iaculis, ante sed vehicula accumsan, ante dui suscipit orci, in vulputate est lacus id nisi. Maecenas nec lectus faucibus, venenatis lectus sed, pulvinar libero. Pellentesque vulputate elit orci, nec lacinia arcu faucibus quis. Sed imperdiet tempor libero eu elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas ligula purus, sagittis sodales augue sed, tempor pulvinar augue. Praesent aliquet, mauris eget bibendum placerat, est ligula gravida est, ut feugiat turpis orci vel diam. Morbi at odio eget tortor vestibulum malesuada.</p>
-        <p>Curabitur blandit neque non faucibus pellentesque. Nam faucibus neque non feugiat consequat. Morbi dignissim lectus non porttitor fringilla. Nulla id sodales velit. Integer a libero finibus, consequat augue pretium, consequat est. Etiam malesuada suscipit enim, at tristique felis dapibus et. Duis in mauris eu nulla hendrerit sagittis. Suspendisse nunc diam, varius eu turpis in, laoreet varius libero. Sed vulputate libero eget nisl mollis lacinia.</p>
+        <p>My portfolio website!</p>
+        <p>This website you're visiting was made entirely in React with GatsbyJS. It is intended to be updated constantly and soon will have a mobile version and a PWA. All styles colors and design are entirely by me. Visit it's GitHub page to check out the source code.</p>
       </PortfolioEntry>
-    </PageSection>
+      <PortfolioEntry
+        image={websiteImage}
+        title='Expense Manager App'
+        links={[
+          { to: 'https://github.com/victorfeitosa/ExpenseManager', icon: <FaGithub />, title: 'Github', text: 'Repository'},
+          { to: 'https://expense-man.herokuapp.com/', icon: <FaRocket />, title: 'App', text: 'WebApp'}
+        ]}
+        // TODO: Add PWA to here, add app image
+        badges={['Firebase', 'PWA', 'React', 'SCSS', 'WebApp']}
+      >
+        <p>An Expense Manager WebApp. Done in React with Firebase for Database and Authentication.</p>
+        <p>This app records expenses the user had and filters them in a date span. It is mobile-first and soon will be a PWA. This was done so I could learn React and Firebase, so  it's pretty simple!</p>
+      </PortfolioEntry>
+      <PortfolioEntry
+        image={websiteImage}
+        title='Old FrontEnd Projects'
+        links={[
+          { to: 'https://github.com/victorfeitosa/OldFrontendProjects', icon: <FaGithub />, title: 'Github', text: 'Repository'},
+          // { to: 'https://expense-man.herokuapp.com/', icon: <FaRocket />, title: 'App', text: 'WebApp'}
+        ]}
+        badges={['ES6', 'Front End', 'Mobile-first', 'SCSS', 'SPA', 'WebApp']}
+      >
+        <p>These are several Front End projects I've done in the past, usually small things to learn a framework, or tests for job interviews</p>
+        <p>Some of them are pretty rough around the edges and were done only to learn some concepts.</p>
+      </PortfolioEntry>
   </PageMain>
 )
 
