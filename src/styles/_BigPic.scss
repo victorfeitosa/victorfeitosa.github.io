@@ -1,5 +1,6 @@
 $img-size: 400px;
 $img-size-sm: 180px;
+$img-size-ssm: 140px;
 $img-size-xsm: 100px;
 
 .big-pic {
@@ -26,15 +27,19 @@ $img-size-xsm: 100px;
     min-height: $img-size-sm;
     min-width: $img-size-sm;
     width: $img-size-sm;
-  }
 
-  @media only screen and (max-width: $large-breakpoint) {
-    &--small {
+    @media only screen and (max-width: $large-breakpoint) {
       height: $img-size-xsm;
       margin-top: .5rem;
       min-height: $img-size-xsm;
       min-width: $img-size-xsm;
       width: $img-size-xsm;
+    }
+
+    @media only screen and (max-width: $medium-breakpoint) {
+      height: $img-size-ssm;
+      transform: translate(-15%, 5%);
+      width: $img-size-ssm;
     }
   }
 }

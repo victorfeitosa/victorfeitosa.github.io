@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaGithub, FaHome, FaRocket } from 'react-icons/fa'
-import { PageMain, Title, SubTitle, PageSection, PageSectionContainer } from '../components/PageElements'
+import { PageMain, Title } from '../components/PageElements'
 import PortfolioEntry from '../components/PortfolioEntry'
 
 import websiteImage from '../images/website.jpg'

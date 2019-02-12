@@ -1,9 +1,13 @@
 .tags-container {
   display: flex;
-  justify-content: space-between;
   height: 4rem;
+  justify-content: space-between;
   padding-top: 3rem;
   width: auto;
+
+  @media only screen and (max-width: $medium-breakpoint) {
+    padding-top: 0;
+  }
 
   .tag {
     color: $highlight;
@@ -24,28 +28,33 @@
       }
     }
   }
-  
+
   &--short {
     flex-direction: column;
     justify-content: center;
+
+    @media only screen and (max-width: $large-breakpoint) {
+      height: auto;
+      padding-top: 1.5rem;
+    }
+
+    @media only screen and (max-width: $medium-breakpoint) {
+      display: none;
+    }
 
     .tag {
       font-size: 16px;
       padding: .25rem 0;
       text-align: center;
-      &::after {
-        content: '';
-        display: none;
-      }
 
       @media only screen and (max-width: $large-breakpoint) {
         margin-bottom: .5rem;
       }
-    }
-  }
 
-  @media only screen and (max-width: $large-breakpoint) {
-    height: auto;
-    padding-top: 1.5rem;
+      &::after {
+        content: '';
+        display: none;
+      }
+    }
   }
 }

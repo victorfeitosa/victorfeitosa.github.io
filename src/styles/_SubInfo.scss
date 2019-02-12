@@ -4,11 +4,21 @@
 
   &--small {
     padding-top: .5rem;
+
+    @media only screen and (max-width: $medium-breakpoint) {
+      height: 100%;
+      padding-top: 0;
+    }
   }
 
   .title {
     font-family: $d-font-family;
     transition: font-size .3s ease-in-out, opacity .3s ease-in-out;
+
+    @media only screen and (max-width: $large-breakpoint) {
+      margin-bottom: 2rem;
+      padding-top: 0;
+    }
 
     &--main {
       color: $contrast;
@@ -22,6 +32,12 @@
       &--small {
         font-size: 26px;
         padding-top: 1.5rem;
+
+        @media only screen and (max-width: $medium-breakpoint) {
+          font-size: 32px;
+          margin: 0;
+          padding-top: 0;
+        }
 
         .hideable {
           display: none;
@@ -40,10 +56,5 @@
         display: none;
       }
     }
-  }
-
-  @media only screen and (max-width: $large-breakpoint) {
-    margin-bottom: 2rem;
-    padding-top: 0;
   }
 }

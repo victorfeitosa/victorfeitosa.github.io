@@ -3,6 +3,11 @@
   display: flex;
   height: 100vh;
   min-height: 720px;
+
+  @media only screen and (max-width: $medium-breakpoint) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .profile-section {
@@ -16,9 +21,32 @@
   transition: width $d-animation;
   width: 85%;
 
+  @media only screen and (max-width: $medium-breakpoint) {
+    clip-path: polygon(0 0, 100% 0%, 100% 99%, 0 100%);
+    height: calc(100% - 3.5rem);
+    transition: height $d-animation;
+    width: 100%;
+    z-index: 2;
+  }
+
   &--open {
     justify-content: flex-start;
     width: 20%;
+
+    @media only screen and (max-width: $large-breakpoint) {
+      clip-path: none;
+      overflow: hidden;
+      width: 120px;
+    }
+
+    @media only screen and (max-width: $medium-breakpoint) {
+      clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
+      flex-direction: row;
+      height: 5rem;
+      justify-content: space-between;
+      width: 100%;
+    }
+
   }
 
   .info-block {
@@ -29,13 +57,21 @@
     padding: 4% 1rem;
     transition: width $d-animation;
     width: 100%;
-  }
 
-  @media only screen and (max-width: $large-breakpoint) {
-    &--open {
-      clip-path: none;
-      overflow: hidden;
-      width: 120px;
+    @media only screen and (max-width: $medium-breakpoint) {
+      transition: height $d-animation;
+    }
+
+    &--small {
+      @media only screen and (max-width: $medium-breakpoint) {
+        align-items: center;
+        flex: 5;
+        flex-direction: row;
+        justify-content: space-between;
+        max-height: 100%;
+        padding: .5rem;
+        width: auto;
+      }
     }
   }
 }
@@ -53,16 +89,27 @@
               opacity $x-long-duration ease-in-out,
               width $d-animation;
 
+  @media only screen and (max-width: $medium-breakpoint) {
+    height: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
   &--open {
     max-width: calc(80% - 15%);
     min-width: calc(80% - 260px);
     opacity: 1;
+
     @media only screen and (max-width: $large-breakpoint) {
       max-width: calc(80% - 12%);
       min-width: calc(80% - 180px);
     }
-  }
 
+    @media only screen and (max-width: $medium-breakpoint) {
+      height: 100%;
+      max-width: 100%;
+    }
+  }
 }
 
 .menu-section {
@@ -78,6 +125,18 @@
   width: 15%;
 
   @media only screen and (max-width: $large-breakpoint) {
-    min-width: 220px;
+    min-width: 200px;
+  }
+
+  @media only screen and (max-width: $medium-breakpoint) {
+    background-color: $white;
+    bottom: 0;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, .15);
+    height: 4rem;
+    left: 0;
+    max-width: 100%;
+    right: 0;
+    width: 100%;
+    z-index: 1;
   }
 }

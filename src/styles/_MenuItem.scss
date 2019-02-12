@@ -7,8 +7,9 @@
   font-size: 180%;
 
   padding: 1rem 2rem;
-  text-decoration: none;
+  position: relative;
   text-align: right;
+  text-decoration: none;
   transition: background-color .2s ease-in-out, color .2s ease-in-out;
   width: 100%;
   z-index: 2;
@@ -23,11 +24,27 @@
     transition: width .3s ease-in-out, border-radius .3s ease-in-out;
     width: 0;
     z-index: -1;
+
+    @media only screen and (max-width: $medium-breakpoint) {
+      height: .5rem;
+      left: 50%;
+      top: -.85rem;
+      transform: translate(-50%, -100%);
+                  
+      transition: border-radius .3s ease-in-out,
+                  width .3s ease-in-out;
+      width: 0;
+    }
   }
 
   &:hover {
     &::before {
       width: 0.5rem;
+
+      @media only screen and (max-width: $medium-breakpoint) {
+        height: .5rem;
+        width: 100%;
+      }
     }
   }
 
@@ -40,7 +57,11 @@
         width: 100%;
 
         @media only screen and (max-width: $large-breakpoint) {
-          width: 75%;
+          width: 90%;
+        }
+        
+        @media only screen and (max-width: $medium-breakpoint) {
+          border-radius: 50% 50% 0 0;
         }
       }
     }
@@ -48,10 +69,19 @@
     &::before {
       border-radius: 2% 0 0 2% / 50% 0 0 50%;
       width: 100%;
+
+      @media only screen and (max-width: $medium-breakpoint) {
+        border-radius: 50% 50% 0 0;
+      }
     }
   }
 
   @media only screen and (max-width: $large-breakpoint) {
     font-size: 160%;
+  }
+
+  @media only screen and (max-width: $large-breakpoint) {
+    padding-top: 0;
+    width: auto;
   }
 }
