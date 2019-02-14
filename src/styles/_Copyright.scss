@@ -9,7 +9,9 @@
   position: absolute;
 
   @media only screen and (max-width: $large-breakpoint) {
+    align-self: flex-end;
     font-size: 86%;
+    padding: 0 .5rem .5rem;
   }
 
   @media only screen and (max-width: $medium-breakpoint) {

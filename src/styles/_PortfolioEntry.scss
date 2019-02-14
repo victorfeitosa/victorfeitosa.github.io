@@ -67,6 +67,10 @@
   margin: 0 .5rem;
   padding: .35rem .5rem .5rem;
   text-align: center;
+
+  @media only screen and (max-width: $medium-breakpoint) {
+    margin-bottom: .25rem;
+  }
 }
 
 
@@ -165,10 +169,6 @@
       color: $highlight;
       right: 32%;
     }
-
-    // .portfolio-entry__links {
-    //   transform: translateX(0);
-    // }
 
     .portfolio-link {
       transform: translateX(0);

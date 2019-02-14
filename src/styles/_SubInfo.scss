@@ -2,6 +2,9 @@
   padding-top: 4rem;
   text-align: center;
 
+  @media only screen and (max-width: $medium-breakpoint) {
+    padding-top: 2.5rem;
+  }
   @media only screen and (max-width: $small-breakpoint) {
     padding-top: 1.5rem;
   }
@@ -70,6 +73,9 @@
       padding-top: 1rem;
       transition: opacity .3s ease-in-out;
 
+      @media only screen and (max-width: $medium-breakpoint) {
+        padding-top: 0;
+      }
       @media only screen and (max-width: $small-breakpoint) {
         display: none;
       }

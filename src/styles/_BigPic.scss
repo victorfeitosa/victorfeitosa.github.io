@@ -22,7 +22,7 @@ $img-size-xsm: 110px;
               margin-top $d-animation;
   width: $img-size;
 
-  @media only screen and (max-width: $small-breakpoint) {
+  @media only screen and (max-width: $medium-breakpoint) {
     height: $img-size-md;
     min-height: $img-size-md;
     min-width: $img-size-md;
