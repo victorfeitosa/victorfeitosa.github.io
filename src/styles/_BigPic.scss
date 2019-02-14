@@ -1,7 +1,8 @@
 $img-size: 400px;
+$img-size-md: 280px;
 $img-size-sm: 180px;
 $img-size-ssm: 140px;
-$img-size-xsm: 100px;
+$img-size-xsm: 110px;
 
 .big-pic {
   background-image: url(../images/profile.jpg);
@@ -21,6 +22,13 @@ $img-size-xsm: 100px;
               margin-top $d-animation;
   width: $img-size;
 
+  @media only screen and (max-width: $small-breakpoint) {
+    height: $img-size-md;
+    min-height: $img-size-md;
+    min-width: $img-size-md;
+    width: $img-size-md;
+  }
+
   &--small {
     height: $img-size-sm;
     margin-top: 3rem;
@@ -35,11 +43,9 @@ $img-size-xsm: 100px;
       min-width: $img-size-xsm;
       width: $img-size-xsm;
     }
-
-    @media only screen and (max-width: $medium-breakpoint) {
-      height: $img-size-ssm;
-      transform: translate(-15%, 5%);
-      width: $img-size-ssm;
+    
+    @media only screen and (max-width: $small-breakpoint) {
+      transform: translate(-20%, 5%);
     }
   }
 }

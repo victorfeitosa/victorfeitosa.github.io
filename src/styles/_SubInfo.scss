@@ -2,6 +2,10 @@
   padding-top: 4rem;
   text-align: center;
 
+  @media only screen and (max-width: $small-breakpoint) {
+    padding-top: 1.5rem;
+  }
+
   &--small {
     padding-top: .5rem;
 
@@ -24,9 +28,19 @@
       color: $contrast;
       font-size: 36px;
       font-weight: bold;
+      word-wrap: break-word;
+      white-space: normal;
+      
 
       @media only screen and (max-width: $large-breakpoint) {
         line-height: 2rem;
+      }
+
+      .hideable {
+        @media only screen and (max-width: $small-breakpoint) {
+          display: none;
+        }
+
       }
 
       &--small {
@@ -37,6 +51,10 @@
           font-size: 32px;
           margin: 0;
           padding-top: 0;
+        }
+
+        @media only screen and (max-width: $small-breakpoint) {
+          display: none;
         }
 
         .hideable {
@@ -51,6 +69,10 @@
       font-weight: 500;
       padding-top: 1rem;
       transition: opacity .3s ease-in-out;
+
+      @media only screen and (max-width: $small-breakpoint) {
+        display: none;
+      }
 
       &--hidden {
         display: none;

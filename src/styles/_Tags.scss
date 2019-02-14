@@ -9,17 +9,32 @@
     padding-top: 0;
   }
 
+  @media only screen and (max-width: $small-breakpoint) {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
   .tag {
     color: $highlight;
     font-family: $d-font-family;
     font-size: 24px;
     width: auto;
 
+    @media only screen and (max-width: $small-breakpoint) {
+      font-size: 20px;
+      margin-bottom: .5rem;
+    }
+
     &::after {
       color: $contrast;
       content: '/';
       font-weight: 500;
       margin: 0 .5rem;
+
+      @media only screen and (max-width: $small-breakpoint) {
+        content: '';
+      }
     }
 
     &:last-child {

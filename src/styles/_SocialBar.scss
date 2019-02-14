@@ -8,6 +8,9 @@
   @media only screen and (max-width: $large-breakpoint) {
     padding: 4rem 0 0;
   }
+  @media only screen and (max-width: $small-breakpoint) {
+    padding: 1rem 0 0;
+  }
 
   &--small {
     flex-direction: column;
@@ -23,6 +26,10 @@
       flex-direction: row;
       padding: 0;
       padding-right: 2rem;
+    }
+
+    @media only screen and (max-width: $small-breakpoint) {
+      padding-right: 0;
     }
   }
 }

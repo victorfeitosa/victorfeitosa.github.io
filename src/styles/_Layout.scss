@@ -29,6 +29,10 @@
     z-index: 2;
   }
 
+  @media only screen and (max-width: $medium-breakpoint) {
+
+  }
+
   &--open {
     justify-content: flex-start;
     width: 20%;
@@ -61,6 +65,12 @@
     @media only screen and (max-width: $medium-breakpoint) {
       transition: height $d-animation;
     }
+    
+    @media only screen and (max-width: $small-breakpoint) {
+      height: 50%;
+      justify-content: space-around;
+      padding: 1rem .5rem;
+    }
 
     &--small {
       @media only screen and (max-width: $medium-breakpoint) {
@@ -71,6 +81,12 @@
         max-height: 100%;
         padding: .5rem;
         width: auto;
+      }
+
+      @media only screen and (max-width: $small-breakpoint) {
+        flex: 5 1;
+        padding: 0;
+        padding-right: 1rem;
       }
     }
   }
@@ -108,6 +124,10 @@
     @media only screen and (max-width: $medium-breakpoint) {
       height: 100%;
       max-width: 100%;
+    }
+
+    @media only screen and (max-width: $small-breakpoint) {
+      margin-bottom: 3rem;
     }
   }
 }

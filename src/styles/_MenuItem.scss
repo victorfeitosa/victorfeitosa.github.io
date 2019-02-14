@@ -24,6 +24,10 @@
     width: auto;
   }
 
+  @media only screen and (max-width: $small-breakpoint) {
+    padding: .25rem 1rem 1rem;
+  }
+
   &::before {
     background-color: $contrast;
     content: '';

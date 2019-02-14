@@ -10,6 +10,15 @@
   padding: 1rem;
   transition: color $d-animation;
 
+  @media only screen and (max-width: $large-breakpoint) {
+    font-size: 36px;
+  }
+
+  @media only screen and (max-width: $small-breakpoint) {
+    font-size: 30px;
+    padding: 0 .5rem;
+  }
+
   svg {
     transform-origin: center;
     transition: transform $d-animation;
@@ -20,7 +29,4 @@
     color: $highlight;
   }
 
-  @media only screen and (max-width: $large-breakpoint) {
-    font-size: 36px;
-  }
 }
