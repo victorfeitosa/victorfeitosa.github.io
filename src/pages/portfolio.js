@@ -30,7 +30,7 @@ const Portfolio = () => (
           { to: 'https://expense-man.herokuapp.com/', icon: <FaRocket />, title: 'App', text: 'WebApp'}
         ]}
         // TODO: Add PWA to here, add app image
-        badges={['Firebase', 'PWA', 'React', 'SCSS', 'WebApp']}
+        badges={['Firebase', 'Mobile-First', 'React', 'SCSS', 'SPA', 'WebApp']}
       >
         <p>An Expense Manager WebApp. Done in React with Firebase for Database and Authentication.</p>
         <p>This app records expenses the user had and filters them in a date span. It is mobile-first and soon will be a PWA. This was done so I could learn React and Firebase, so  it's pretty simple!</p>
