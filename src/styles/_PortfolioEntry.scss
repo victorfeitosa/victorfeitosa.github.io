@@ -17,8 +17,11 @@
 
   &__header {
     color: $background;
+    display: inline-block;
     font-family: $d-font-family;
     font-size: 22px;
+    padding-left: 1rem;
+    transform: translateY(-50%);
     transition: color $d-animation;
   }
 

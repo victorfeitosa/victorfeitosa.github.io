@@ -10,7 +10,7 @@ const SocialLink = (props) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-        {props.icon}
+        {props.icon}{props.children}
     </a>
   )
 }

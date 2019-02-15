@@ -4,7 +4,7 @@ import SocialLink from './SocialLink'
 
 const PortfolioLink = ({ icon, to, children, title }) => (
   <div className='portfolio-link'>
-    <SocialLink to={to} icon={icon} title={title} />&nbsp;<h2 className='portfolio-link__header'>{ children }</h2>
+    <SocialLink to={to} icon={icon} title={title}><h2 className='portfolio-link__header'>{ children }</h2></SocialLink>
   </div>
 )
 
