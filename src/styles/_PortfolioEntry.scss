@@ -105,6 +105,11 @@
     right: 0;
     transition: clip-path $d-animation;
     width: 100%;
+
+    @media only screen and (max-width: $small-breakpoint) {
+      background-color: transparent;
+      clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+    }
   }
 
   &__title {
@@ -120,8 +125,15 @@
     right: 0;
     transform: translate3d(0, 0, 0);
     transition: color $d-animation,
+                opacity $d-animation,
+                font-size $d-animation,
                 right $d-animation;
     z-index: 1;
+
+    @media only screen and (max-width: $small-breakpoint) {
+      bottom: 0;
+      font-size: 24px;
+    }
   }
 
   &__text-area {
@@ -143,7 +155,6 @@
     padding: .5rem 0;
     position: absolute;
     right: 3rem;
-    // transform: translateX(200%);
     transition: transform $d-animation;
   }
 
@@ -163,11 +174,23 @@
 
     .portfolio-entry__header {
       clip-path: polygon(61.5% 0%, 100% 0%, 100% 100%, 58% 100%);
+
+      @media only screen and (max-width: $small-breakpoint) {
+        background-color: $base;
+        clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 20% 100%);
+      }
     }
 
     .portfolio-entry__title {
       color: $highlight;
       right: 32%;
+
+      @media only screen and (max-width: $small-breakpoint) {
+        font-size: 11px;
+        left: 0;
+        padding: .5rem;
+        right: auto;
+      }
     }
 
     .portfolio-link {
