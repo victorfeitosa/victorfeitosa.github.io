@@ -10,6 +10,10 @@
   padding: 1rem;
   transition: color $d-animation;
 
+  svg {
+    transition: fill $d-animation, color $d-animation;
+  }
+
   @media only screen and (max-width: $large-breakpoint) {
     font-size: 36px;
     padding: .5rem;
@@ -27,7 +31,7 @@
 
   &:hover svg {
     animation: shake $d-animation;
-    color: $highlight;
+    fill: $highlight;
   }
 
 }

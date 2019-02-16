@@ -33,6 +33,7 @@
 
     svg {
       transform-origin: center;
+      transition: fill $d-animation, color $d-animation;
     }
   }
 
@@ -45,6 +46,7 @@
       svg {
         animation: shake $d-animation;
         animation-delay: $d-duration;
+        fill: $highlight;
       }
     }
 
