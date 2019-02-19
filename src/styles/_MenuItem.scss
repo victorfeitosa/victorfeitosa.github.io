@@ -68,10 +68,10 @@
     &:hover {
       &::before {
         border-radius: 2% 0 0 2% / 50% 0 0 50%;
-        width: 100%;
+        width: 105%;
 
         @media only screen and (max-width: $large-breakpoint) {
-          width: 90%;
+          width: 85%;
         }
         
         @media only screen and (max-width: $medium-breakpoint) {
