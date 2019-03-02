@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "express": "^4.16.4",
     "gatsby": "^2.0.19",
     "gatsby-image": "^2.0.27",
     "gatsby-plugin-manifest": "^2.0.5",
@@ -31,9 +32,10 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "deploy": "gatsby build && gh-pages -d /public -b master",
-    "start": "npm run develop",
+    "start": "node server/server.js",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "yarn run build"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
