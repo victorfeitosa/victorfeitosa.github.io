@@ -3,3 +3,7 @@
 @import './defaults/colors';
 @import './components';
 @import './pages';
+
+html {
+  background-color: $base;
+}

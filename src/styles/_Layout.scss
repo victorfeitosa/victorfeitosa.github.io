@@ -1,4 +1,5 @@
 .main-layout {
+  background-color: $white;
   box-sizing: border-box;
   display: flex;
   height: 100vh;
@@ -8,7 +9,7 @@
   @media only screen and (max-width: $medium-breakpoint) {
     flex-direction: column;
     justify-content: space-between;
-    min-height: 600px;
+    min-height: 640px;
   }
 
   @media only screen and (max-width: $small-breakpoint) {
