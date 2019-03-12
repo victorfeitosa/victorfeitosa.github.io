@@ -1,5 +1,4 @@
 import React from 'react'
-import Loading from '../components/Loading'
 
 export class CV extends React.Component {
   constructor(props) {

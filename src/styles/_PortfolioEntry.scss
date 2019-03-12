@@ -82,14 +82,17 @@
 .portfolio-entry {
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
   overflow: hidden;
+  position: relative;
   width: 100%;
 
   &__block-area {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, .15);
+    border-radius: 3px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, .3);
     display: flex;
     margin-bottom: .75rem;
+    overflow: hidden;
     position: relative;
   }
 
@@ -168,7 +171,6 @@
     content: '';
     height: 1px;
     width: 100%;
-
   }
 
   &__block-area:hover {
