@@ -1,0 +1,31 @@
+@keyframes fillup {
+  to { stroke-dashoffset: var(--stroke-dashoffset); }
+}
+
+.skill {
+  height: 300px;
+  position: relative;
+  width: 300px;
+
+  &__text {
+    font-family: $d-font-family;
+    font-size: 24px;
+    font-weight: bolder;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__donut {
+    height: 100%;
+    width: 100%;
+
+    circle {
+      fill: none;
+      transform: translate(50%, 50%);
+      transform-origin: center;
+      transition: stroke-dashoffset 1s ease-in-out;
+    }
+  }
+}

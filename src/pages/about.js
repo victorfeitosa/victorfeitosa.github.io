@@ -1,6 +1,7 @@
 import React from 'react'
 import { Title, SubTitle, Paragraph, TextImage, PageMain, PageLink } from '../components/PageElements'
 import { FaEnvelope, FaPalette, FaFileAlt } from 'react-icons/fa'
+import SkillDonut from '../components/SkillDonut';
 
 
 const About = () => (
@@ -18,6 +19,7 @@ const About = () => (
       in 2018. I've always worked with different technologies and areas such as game development, mobile, web and embedded systems. Here's a few of the 
       tech I adopt:
     </Paragraph>
+    <SkillDonut color='yellow' percentage={75}>JS</SkillDonut>
     <Paragraph>
       Currently, I work as a full time web developer, with focus in Front End and UI/UX design, still doing some backend work here and there, but mostly 
       desining pages, apps and systems from the ground up with a great team of developers at Intrapoint. We power one of Norways bigest Oil companies and 
