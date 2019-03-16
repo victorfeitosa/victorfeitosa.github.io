@@ -51,7 +51,7 @@
     .bgCircle,
     .fgCircle {
       fill: none;
-      transform: translate(50%, 50%);
+      transform: rotate(90deg) translate(50%, 50%);
       transform-origin: center;
     }
 

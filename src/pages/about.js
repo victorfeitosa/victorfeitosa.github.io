@@ -20,7 +20,7 @@ const About = () => (
       tech I adopt:
     </Paragraph>
     <SkillSection>
-      <SkillDonut color='#F1DB51' percentage={85}>ES6</SkillDonut>
+      <SkillDonut color='#F1DB51' percentage={85}>ES6+</SkillDonut>
       <SkillDonut color='#61DAFB' percentage={75}>React</SkillDonut>
       <SkillDonut color='#CE679A' percentage={90}>SASS</SkillDonut>
     </SkillSection>
