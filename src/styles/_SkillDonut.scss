@@ -1,31 +1,63 @@
-@keyframes fillup {
-  to { stroke-dashoffset: var(--stroke-dashoffset); }
+.skill-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
 .skill {
-  height: 300px;
+  display: inline-block;
+  margin: 0 .5rem;
   position: relative;
-  width: 300px;
+
+  &::before {
+    background-color: $base;
+    border-radius: 50%;
+    bottom: 0;
+    content: '';
+    filter: blur(4px);
+    height: 1rem;
+    left: 50%;
+    opacity: .1;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 50%;
+  }
 
   &__text {
+    color: $base;
+    display: block;
     font-family: $d-font-family;
     font-size: 24px;
     font-weight: bolder;
     left: 50%;
     position: absolute;
+    text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  &__percent {
+    display: block;
+    font-size: 18px;
+    padding-top: .5rem;
   }
 
   &__donut {
     height: 100%;
     width: 100%;
+    z-index: 1;
 
-    circle {
+    .bgCircle,
+    .fgCircle {
       fill: none;
       transform: translate(50%, 50%);
       transform-origin: center;
-      transition: stroke-dashoffset 1s ease-in-out;
+    }
+
+    .bgCircle {
+      stroke: $background;
+      stroke-opacity: .7;
     }
   }
 }

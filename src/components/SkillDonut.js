@@ -1,5 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import anime from 'animejs/lib/anime.es'
+
+export const SkillSection = ({ children }) => (
+  <div className='skill-section'>
+    {children}
+  </div>
+)
+
 
 export default class SkillDonut extends Component {
   static propTypes = {
@@ -10,13 +18,12 @@ export default class SkillDonut extends Component {
   }
 
   static defaultProps = {
-    radius: 100,
-    strokeWidth: 40
+    radius: 70,
+    strokeWidth: 30
   }
 
   constructor(props) {
     super(props)
-
     this.state = {
       animated: false,
       dash: 2 * Math.PI * props.radius
@@ -24,28 +31,44 @@ export default class SkillDonut extends Component {
   }
 
   componentDidMount() {
-    if (!this.state.animated) {
-      const rate = 100 - this.props.percentage
-      const dash = rate / 100 * this.state.dash
-      setTimeout(() => {
-        this.setState({
-          animated: true,
-          dash
-        })
-      }, 300)
-    }
+    const [percent, initialDash] = [this.props.percentage, this.state.dash]
+    const rate = 100 - percent
+    const dash = rate / 100 * initialDash
+
+    anime.timeline({
+      easing: 'easeOutCubic',
+      delay: 500,
+      duration: 1000
+    })
+      .add({
+        targets: this.refs.skillCircle,
+        strokeDashoffset: [initialDash, dash],
+        round: 1
+      }, 0)
+      .add({
+        targets: this.refs.skillPercentage,
+        textContent: ['0%', `${percent}%`],
+        round: 1
+      }, 0)
   }
 
   render() {
     const { radius, children, color, strokeWidth } = this.props
-    let dashArray = 2 * Math.PI * radius
+    const size = radius * 3
+    const dashArray = 2 * Math.PI * radius
 
     return (
-      <div className="skill" ref='skillDonut'>
-        <svg className="skill__container" width="100%" height="100%" >
+      <div className="skill">
+        <svg className="skill__container" width={size} height={size} >
           <g className="skill__donut">
             <circle
-              ref='skillDonutCircle'
+              className='bgCircle'
+              strokeWidth={strokeWidth}
+              r={radius}
+            />
+            <circle
+              className='fgCircle'
+              ref='skillCircle'
               stroke={color}
               strokeWidth={strokeWidth}
               strokeDasharray={dashArray}
@@ -56,7 +79,7 @@ export default class SkillDonut extends Component {
         </svg>
         <h2 className="skill__text">
           {children}
-          <span>30%</span>
+          <span className='skill__percent' ref='skillPercentage'>0</span>
         </h2>
       </div>
     )
