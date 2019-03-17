@@ -1,3 +1,9 @@
+@keyframes shake {
+  25% { transform: rotate(8deg); }
+  75% { transform: rotate(-8deg); }
+  100% { transform: rotate(0); }
+}
+
 .page-main {
   padding: 1rem;
 
@@ -92,20 +98,13 @@
       font-weight: bold;
       margin-left: .5rem;
       text-align: center;
-      transform: translateY(20%);
 
-      transform-origin: bottom;
+      transform-origin: center;
     }
 
     &:hover {
       .page-link__anchor::before {
         width: 100%;
-      }
-
-      @keyframes shake {
-        25% { transform: rotate(8deg); }
-        75% { transform: rotate(-8deg); }
-        100% { transform: rotate(0); }
       }
 
       .page-link__icon {
