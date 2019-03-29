@@ -2,21 +2,25 @@
   align-content: center;
   align-items: center;
   display: flex;
+  height: 42%;
   justify-content: space-between;
-  padding: 2rem 0 0;
+  justify-self: flex-end;
+  padding: 0 2rem 2rem;
 
   @media only screen and (max-width: $large-breakpoint) {
-    padding: 4rem 0 0;
+    padding: 2rem 0 0;
+  }
+  @media only screen and (max-width: $medium-breakpoint) {
+    width: 70%;
   }
   @media only screen and (max-width: $small-breakpoint) {
     padding: 0;
   }
 
   &--small {
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 5rem 0 0;
+    padding: 0 2.5rem 1rem;
 
     @media only screen and (max-width: $large-breakpoint) {
       padding: 4rem 0 0;

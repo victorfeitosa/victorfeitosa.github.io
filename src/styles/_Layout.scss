@@ -3,13 +3,12 @@
   box-sizing: border-box;
   display: flex;
   height: 100vh;
-  min-height: 720px;
+  min-height: 600px;
   position: relative;
 
   @media only screen and (max-width: $medium-breakpoint) {
     flex-direction: column;
     justify-content: space-between;
-    min-height: 640px;
   }
 
   @media only screen and (max-width: $small-breakpoint) {
@@ -58,8 +57,9 @@
   .info-block {
     align-items: center;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     transition: width $d-animation;
     width: 100%;
 

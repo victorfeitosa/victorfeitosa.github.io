@@ -1,5 +1,5 @@
-$img-size: 400px;
-$img-size-md: 280px;
+$img-size: 48vh;
+$img-size-md: 40vh;
 $img-size-sm: 180px;
 $img-size-ssm: 140px;
 $img-size-xsm: 110px;
@@ -15,8 +15,6 @@ $img-size-xsm: 110px;
   border-radius: 50%;
   box-shadow: 0 4px 20px 6px rgba(0, 0, 0, .3);
   height: $img-size;
-  min-height: $img-size;
-  min-width: $img-size;
   transition: min-width $d-animation,
               min-height $d-animation,
               width $d-animation,

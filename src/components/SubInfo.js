@@ -11,16 +11,16 @@ export default function SubInfo(props) {
           Victor Feitosa
         </h2>
         <h3 className={'title title--sub' + (props.isSmall ? ' title--sub--hidden' : '')}>I'm a Full Time</h3>
+        <Tags
+          isSmall={props.isSmall}
+          tags={[
+            'Front End Developer',
+            'Gamer',
+            'Artist',
+            'Technology Enthusiast',
+          ]}
+        />
       </div>
-      <Tags
-        isSmall={props.isSmall}
-        tags={[
-          'Front End Developer',
-          'Gamer',
-          'Artist',
-          'Technology Enthusiast',
-        ]}
-      />
       <SocialBar isSmall={props.isSmall} />
     </>
   )

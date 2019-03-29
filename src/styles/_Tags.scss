@@ -1,12 +1,12 @@
 .tags-container {
   display: flex;
-  height: 4rem;
+  height: auto;
   justify-content: space-between;
-  padding-top: 2rem;
+  padding-top: 1rem;
   width: auto;
 
   @media only screen and (max-width: $medium-breakpoint) {
-    padding-top: 0;
+    padding-top: 1rem;
   }
 
   @media only screen and (max-width: $small-breakpoint) {
@@ -21,6 +21,9 @@
     font-size: 24px;
     width: auto;
 
+    @media only screen and (max-width: $medium-breakpoint) {
+      font-size: 20px;
+    }
     @media only screen and (max-width: $small-breakpoint) {
       font-size: 18px;
       margin-bottom: .5rem;
