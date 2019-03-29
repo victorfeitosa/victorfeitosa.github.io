@@ -4,15 +4,17 @@ $img-size-sm: 180px;
 $img-size-ssm: 140px;
 $img-size-xsm: 110px;
 
+.big-pic-container {
+  padding-top: 2rem;
+}
+
 .big-pic {
   background-image: url(../images/profile.jpg);
   background-position: center;
   background-size: contain;
   border-radius: 50%;
   box-shadow: 0 4px 20px 6px rgba(0, 0, 0, .3);
-
   height: $img-size;
-  margin-top: 2rem;
   min-height: $img-size;
   min-width: $img-size;
   transition: min-width $d-animation,
@@ -31,14 +33,12 @@ $img-size-xsm: 110px;
 
   &--small {
     height: $img-size-sm;
-    margin-top: 3rem;
     min-height: $img-size-sm;
     min-width: $img-size-sm;
     width: $img-size-sm;
 
     @media only screen and (max-width: $large-breakpoint) {
       height: $img-size-xsm;
-      margin-top: .5rem;
       min-height: $img-size-xsm;
       min-width: $img-size-xsm;
       width: $img-size-xsm;
