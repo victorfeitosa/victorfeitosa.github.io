@@ -33,7 +33,7 @@
 
   .title {
     color: $contrast;
-    font-family: $d-font-family;
+    font-family: $sans;
     font-size: 32px;
     font-weight: bold;
     padding-bottom: 2rem;
@@ -51,7 +51,7 @@
   .subtitle {
     color: $grey;
     display: inline-block;
-    font-family: $d-font-family;
+    font-family: $sans;
     font-size: 24px;
     font-weight: 500;
     padding: 1rem 0 0;
@@ -59,6 +59,7 @@
 
   .paragraph {
     color: $base;
+    font-family: $serif;
     font-size: 18px;
     line-height: 24px;
     padding: 1rem;
@@ -69,14 +70,14 @@
   .page-link {
     color: $contrast;
     display: inline-block;
-    font-family: $d-font-family;
+    font-family: $sans;
     font-size: 16px;
     font-weight: 500;
     padding: 1rem 0;
 
     &__anchor {
       color: $contrast;
-      font-family: $d-font-family;
+      font-family: $sans;
       font-size: 16px;
       font-weight: 500;
       padding-left: .25rem;

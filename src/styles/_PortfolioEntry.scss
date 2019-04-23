@@ -18,7 +18,7 @@
   &__header {
     color: $background;
     display: inline-block;
-    font-family: $d-font-family;
+    font-family: $sans;
     font-size: 22px;
     padding-left: 1rem;
     transform: translateY(-50%);
@@ -65,7 +65,7 @@
   border-radius: 12px / 50%;
   color: $background;
   display: inline-block;
-  font-family: $d-font-family;
+  font-family: $sans;
   font-size: 16px;
   font-weight: 500;
   line-height: .75rem;
@@ -125,7 +125,7 @@
     bottom: 1.75rem;
     clip-path: polygon(4% 0%, 100% 0%, 100% 100%, 0% 100%);
     color: white;
-    font-family: $d-font-family;
+    font-family: $sans;
     font-size: 30px;
     font-weight: bold;
     padding: .25rem 3rem .5rem;

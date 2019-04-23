@@ -3,6 +3,7 @@ import { FaGithub, FaHome, FaRocket } from 'react-icons/fa'
 import { PageMain, Title } from '../components/PageElements'
 import PortfolioEntry from '../components/PortfolioEntry'
 
+import casebuilderImage from '../images/casebuilder.png'
 import websiteImage from '../images/website.jpg'
 import expensemanImage from '../images/expenseman.jpg'
 import oldprojsImage from '../images/oldprojs.jpg'
@@ -10,6 +11,19 @@ import oldprojsImage from '../images/oldprojs.jpg'
 const Portfolio = () => (
   <PageMain>
     <Title>Portfolio</Title>
+      <PortfolioEntry
+        image={casebuilderImage}
+        title='Phone Case Builder App'
+        links={[
+          { to: 'https://github.com/victorfeitosa/phone-case-builder', icon: <FaGithub />, title: 'Github', text: 'Repository'},
+          { to: 'https://casebuilder.herokuapp.com/', icon: <FaRocket />, title: 'Heroku App', text: 'App'}
+        ]}
+        badges={['15 day challenge', 'Vue', 'Web App', 'Vuetify', 'W.I.P.']}
+      >
+        <p>Made in my free time over 15 days, this app is a phone case builder and customizer that allows the user to build a customized phone case with a backgorund, text and stickers.</p>
+        <p>This project was made to make myself re-acquainted to VueJS. 
+        There are only a few dependencies and I tried to keep most things my own, including the transform widgets and DOM manipulation</p>
+      </PortfolioEntry>
       <PortfolioEntry
         image={websiteImage}
         title='My Website'
@@ -29,7 +43,6 @@ const Portfolio = () => (
           { to: 'https://github.com/victorfeitosa/ExpenseManager', icon: <FaGithub />, title: 'Github', text: 'Repository'},
           { to: 'https://expense-man.herokuapp.com/', icon: <FaRocket />, title: 'App', text: 'WebApp'}
         ]}
-        // TODO: Add PWA to here, add app image
         badges={['Firebase', 'Mobile-First', 'React', 'SCSS', 'SPA', 'WebApp']}
       >
         <p>An Expense Manager WebApp. Done in React with Firebase for Database and Authentication.</p>

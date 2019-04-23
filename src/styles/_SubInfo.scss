@@ -20,7 +20,7 @@
   }
 
   .title {
-    font-family: $d-font-family;
+    font-family: $sans;
     transition: font-size .3s ease-in-out, opacity .3s ease-in-out;
 
     @media only screen and (max-width: $large-breakpoint) {
