@@ -11,7 +11,7 @@ const isPartiallyActive = ({
 
 function MenuItem({ to, children }) {
   return (
-    <Link getProps={isPartiallyActive} className='menu-item' to={to}>{ children }</Link>
+    <Link rel='prefetch' getProps={isPartiallyActive} className='menu-item' to={to}>{ children }</Link>
   )
 }
 
