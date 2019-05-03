@@ -6,6 +6,10 @@ $img-size-xsm: 110px;
 
 .big-pic-container {
   padding-top: 2rem;
+
+  @media only screen and (max-width: $small-breakpoint) {
+    padding-top: 0;
+  }
 }
 
 .big-pic {
@@ -13,13 +17,10 @@ $img-size-xsm: 110px;
   background-position: center;
   background-size: contain;
   border-radius: 50%;
-  box-shadow: 0 4px 20px 6px rgba(0, 0, 0, .3);
+  box-shadow: 0 4px 20px 6px rgba(0, 0, 0, 0.3);
   height: $img-size;
-  transition: min-width $d-animation,
-              min-height $d-animation,
-              width $d-animation,
-              height $d-animation,
-              margin-top $d-animation;
+  transition: min-width $d-animation, min-height $d-animation, width $d-animation, height $d-animation,
+    margin-top $d-animation;
   width: $img-size;
 
   @media only screen and (max-width: $medium-breakpoint) {
@@ -41,7 +42,7 @@ $img-size-xsm: 110px;
       min-width: $img-size-xsm;
       width: $img-size-xsm;
     }
-    
+
     @media only screen and (max-width: $small-breakpoint) {
       transform: translate(-20%, 5%);
     }

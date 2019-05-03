@@ -1,7 +1,13 @@
 @keyframes shake {
-  25% { transform: rotate(8deg); }
-  75% { transform: rotate(-8deg); }
-  100% { transform: rotate(0); }
+  25% {
+    transform: rotate(8deg);
+  }
+  75% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 .social-link {
@@ -16,12 +22,12 @@
 
   @media only screen and (max-width: $large-breakpoint) {
     font-size: 36px;
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   @media only screen and (max-width: $small-breakpoint) {
-    font-size: 30px;
-    padding: 0 .25rem;
+    font-size: 8vw;
+    padding: 0 0.25rem;
   }
 
   svg {
@@ -33,5 +39,4 @@
     animation: shake $d-animation;
     fill: $highlight;
   }
-
 }
