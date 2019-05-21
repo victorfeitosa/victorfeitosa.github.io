@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "victor-feitosa-portfolio",
+  "description": "Victor Feitosa - Portfolio Website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Victor Feitosa <victor.klngo@gmail.com>",
   "dependencies": {
     "animejs": "^3.0.1",
     "eslint": "^5.15.1",
@@ -16,7 +16,7 @@
     "gatsby-plugin-sharp": "^2.0.7",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.12.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
