@@ -26,33 +26,33 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-439b4b750356893e1a21.js"
+    "url": "webpack-runtime-296087f9455411e3ade8.js"
   },
   {
-    "url": "styles.23523923ecc4c0643b89.css"
+    "url": "app.3584c849d218fc21a564.css"
   },
   {
-    "url": "styles-7da05bc6ebe3a4fc8400.js"
+    "url": "app-58ebb51e4ab8e9fd30dc.js"
   },
   {
-    "url": "app-eaa77a3e3c54aa9a5170.js"
-  },
-  {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-3afa3e9c9abb9249faec.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-5eaf82695ba93742be51.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "40a4a01b2b36c2f2f2dbbace5575b441"
+    "revision": "c40d0c9865ab1834ed6edddee65199d9"
   },
   {
-    "url": "component---src-pages-404-js-dd0615a3c7bfee1416e0.js"
+    "url": "component---src-pages-404-js-8fd0f2e00fdcb34be107.js"
   },
   {
-    "url": "static/d/285/path---404-html-516-62a-0SUcWyAf8ecbYDsMhQkEfPzV8.json"
+    "url": "static/d/164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E.json"
+  },
+  {
+    "url": "static/d/520/path---offline-plugin-app-shell-fallback-a-30-c5a-NZuapzHg3X9TaN1iIixfv1W23E.json"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "5c9563ba9e562948553138eaa18c89b9"
+    "revision": "55a9292126f8836e91e5d40b0a8cb54f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -77,23 +77,20 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
-        if (cachedResponse) return cachedResponse
+        if (!cachedResponse) {
+          return fetch(offlineShell).then(response => {
+            if (response.ok) {
+              return caches.open(cacheName).then(cache =>
+                // Clone is needed because put() consumes the response body.
+                cache.put(offlineShell, response.clone()).then(() => response)
+              )
+            } else {
+              return fetch(event.request)
+            }
+          })
+        }
 
-        console.error(
-          `The offline shell (${offlineShell}) was not found ` +
-            `while attempting to serve a response for ${pathname}`
-        )
-
-        return fetch(offlineShell).then(response => {
-          if (response.ok) {
-            return caches.open(cacheName).then(cache =>
-              // Clone is needed because put() consumes the response body.
-              cache.put(offlineShell, response.clone()).then(() => response)
-            )
-          } else {
-            return fetch(event.request)
-          }
-        })
+        return cachedResponse
       })
     }
 
